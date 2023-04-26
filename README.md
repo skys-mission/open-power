@@ -4,41 +4,54 @@
   </a>
 </p>
 
+Other languages: [简体中文](README_zh.md)
 
 # open-power
 
-本仓库用于记录在生产力/性能/稳定/设计等因素中，有某一方面处于优良水平的开源项目。包括但不限于人工智能，区块链，图形图像渲染，图形图像，算法，模型，设计文档，标准文档，程序框架的收集。
+This repository is dedicated to collecting open source projects that excel in one or more aspects such as productivity, performance, stability, and design, among others. This includes, but is not limited to, artificial intelligence, blockchain, graphics and image rendering, algorithms, models, design and standard documents, and program frameworks.
 
 # index
-- [open-power](#open-power)
-- [index](#index)
-- [font](#font)
+- [Index](#index)
+- [Artificial Intelligence](#ai)
+- [Programming Development](#dev)
+- [Open-source fonts](#font)
 
 
 # AI
 
-## 工具
+## Util
 
-|项目简要|地址|协议|
+|Project Brief | URL | License|
 |--|--|--|
-|stable-diffusion-webui |https://github.com/AUTOMATIC1111/stable-diffusion-webui|AGPL 3.0|
+|Stable-diffusion-webui can build a web page with one click, making stable-diffusion a user-friendly product.|https://github.com/AUTOMATIC1111/stable-diffusion-webui|AGPL 3.0|
 
 
-## 算法框架
+## Algorithm framework
 
-|项目简要|地址|协议|
+|Project Brief | URL | License|
 |--|--|--|
-|transformer |https://github.com/lucidrains/x-transformers|MIT|
+|Diffusers is the go-to library for state-of-the-art pretrained diffusion models for generating images, audio, and even 3D structures of molecules.|https://github.com/huggingface/diffusers|ALv2|
 
-## 模型
 
-|项目简要|地址|协议|
+## Model
+
+|Project Brief | URL | License|
 |--|--|--|
-|stable-diffusion |https://github.com/CompVis/stable-diffusion|MIT|
+|Stable Diffusion is currently the most well-known text-to-image diffusion model.|https://github.com/CompVis/stable-diffusion|MIT|
+|X-Transformers is a concise yet fully-featured transformer model, which has been applied by stable-diffusion in the field of NLP. |https://github.com/lucidrains/x-transformers|MIT|
 
+# DEV
 
-# font
+## Golang
 
-|项目简要|地址|协议|
+### Library
+
+|Project Brief | URL | License|
 |--|--|--|
-|霞鹜文楷：适合正文阅读的开源中文字体 |https://github.com/lxgw/LxgwWenKai|OFL1.1|
+|This is a Go language library for managing coroutine pools, which I have been using stably in production.|https://github.com/panjf2000/ants|MIT|
+
+# Font
+
+|Project Brief | URL | License|
+|--|--|--|
+|Xiaowu Wen Kai: An open source Chinese font suitable for reading body text. |https://github.com/lxgw/LxgwWenKai|OFL1.1|
