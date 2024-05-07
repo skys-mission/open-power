@@ -4,53 +4,171 @@
   </a>
 </p>
 
-其它语言：[English](README.md)
+其它语言：[English](README.md), (Currently unable to translate more)
 
 # open-power
 
-本仓库用于记录在生产力/性能/稳定/设计等因素中，有某一方面处于优良水平的开源项目。包括但不限于人工智能，区块链，图形图像渲染，图形图像，算法，模型，设计文档，标准文档，程序框架的收集。
+本仓库用于记录在生产力/性能/稳定/设计等因素中，有某一方面处于优良水平的开源项目。你可以在这里最快速的找到面向生产的选择，我们提倡快速完成自己的工作，而不是去研究细枝末节。
+
+功能重复的项目，我们往往只会记录1-2个，我们并不觉得列出所有同类型的开源项目有什么意义。
+
+我们的评判原则是：简单 > 复杂；易用 > 专业；稳定 > 性能；
+
+包括但不限于人工智能，区块链，图形图像，算法，开发工具，运维工具，各类协议，字体，文档的收集。
 
 # index
+
 - [目录](#index)
 - [人工智能](#ai)
 - [编程开发](#dev)
 - [开源字体](#font)
 
-
 # AI
 
-## 工具
+## 可生产工具
 
-|项目简要|地址|协议|
-|--|--|--|
-|Stable-diffusion-webui可以一键构建web页面，让stable-diffusion变成傻瓜式产品|https://github.com/AUTOMATIC1111/stable-diffusion-webui|AGPL 3.0|
+| 项目简要                                                                                 | 地址（点击访问）                                                                          | 使用许可证                             |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------|
+| Stable-diffusion-webui可以一键构建AI画图的web页面，让AI画图变得简单，目前生态已经非常丰富，社区存在大量优秀插件。              | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | [AGPL 3.0](#quoting-license-text) |
+| 这是一个生产级别低代码节点编辑模式操作Diffusers库的Web项目。同样的，社区存在大量的流程模版与插件。                              | [ComfyUI](https://github.com/comfyanonymous/ComfyUI)                              | [GPL 3.0](#quoting-license-text)  |
+| 一个从音频中分离人声的工具，开发者同时训练了软件包中的大部分模型，虽然README中描述了项目使用MIT许可证，然而项目中已经删除了MIT许可证文件，我们并不知道原因。 | [UVR](https://github.com/Anjok07/ultimatevocalremovergui)                         | [MIT](#quoting-license-text)      |
+| 一个经典的脸部替换项目，本项目owner认为这类型的项目在非学术意义外毫无价值，只会让弱势群体遭受网络诈骗。                               | [DeepFaceLive](https://github.com/iperov/DeepFaceLive)                            | [GPL 3.0](#quoting-license-text)  |
 
+## 工具库
+
+| 项目简要                                                     | 地址（点击访问）                                              | 使用许可证                               |
+|----------------------------------------------------------|-------------------------------------------------------|-------------------------------------|
+| Huggingface开源的Diffusers是用于生成图像、音频甚至分子3D结构的最新预训练扩散模型的首选库。 | [diffusers](https://github.com/huggingface/diffusers) | [Apache 2.0](#quoting-license-text) |
+
+## 人工智能模型
+
+| 项目简要                                                                                                  | 地址（点击访问）                                                                        | 使用许可证                                           |
+|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------|
+| stable-diffusion是目前最知名的开源文本生图像模型，由于一些我们并不清楚的原因截止到2024-05-07，本项目owner认为tability.ai推出的后续版本在社区并没有这个版本活跃。 | [stable-diffusion](https://github.com/CompVis/stable-diffusion)                 | [CreativeML Open RAIL-M](#quoting-license-text) |
+| stable diffusion v1-5 事实上目前社区上基于stable-diffusion最活跃的模型是这个，然而相关技术已经一年没有更新了（截止到2024-05-07）。             | [stable-diffusion v1-5](https://huggingface.co/runwayml/stable-diffusion-v1-5n) | [CreativeML Open RAIL-M](#quoting-license-text) |
 
 ## 算法框架
 
-|项目简要|地址|协议|
-|Diffusers是用于生成图像、音频甚至分子的三维结构的最先进预训练扩散模型的首选库。|https://github.com/huggingface/diffusers|ALv2|
-
-
-## 模型
-
-|项目简要|地址|协议|
-|--|--|--|
-Stable Diffusion是目前最出名的文本到图像扩散模型|https://github.com/CompVis/stable-diffusion|MIT|
-|X-Transformers 是一个简洁但功能齐全的变压器模型，被stable-diffusion在NLP领域应用 |https://github.com/lucidrains/x-transformers|MIT|
+| 项目简要                            | 地址（点击访问）                                      | 使用许可证                                                           |
+|---------------------------------|-----------------------------------------------|-----------------------------------------------------------------|
+| 如果你不知道Pytorch，代表你在人工智能开发领域一无所知。 | [pytorch](https://github.com/pytorch/pytorch) | [pytorch](https://github.com/pytorch/pytorch/blob/main/LICENSE) |
 
 # DEV
 
+## 跨语言
+
+### RPC
+
+我们不认为各种RPC协议的优势劣势有什么本质上的意义，或许随便挑一种来用就可以了。
+
+| 项目简要                                              | 地址（点击访问）                                   | 使用许可证                               |
+|---------------------------------------------------|--------------------------------------------|-------------------------------------|
+| GRPC是Google推出的跨语言RPC协议，使用HTTP/2并通过预先定义字段协议从而增加性能。 | [grpc](https://github.com/grpc/grpc)       | [Apache 2.0](#quoting-license-text) |
+| 如果你不想使用GRPC，thrift是一个好的选择，但目前本项目的编辑人员并不了解这个框架。    | [thrift](https://github.com/apache/thrift) | [Apache 2.0](#quoting-license-text) |
+
+## 数据库
+
+| 项目简要                                                                                   | 地址（点击访问）                                            | 使用许可证                                  |
+|----------------------------------------------------------------------------------------|-----------------------------------------------------|----------------------------------------|
+| OceanBase Database 是一个分布式关系型数据库。完全由蚂蚁集团自主研发。 OceanBase 基于 Paxos 协议以及分布式架构，实现了高可用和线性扩展。 | [oceanbase](https://github.com/oceanbase/oceanbase) | [Mulan PubL v2](#quoting-license-text) |
+
 ## Golang
 
-### 库
+### 基础能力
 
-|Project Brief | URL | License|
-|--|--|--|
-|这是一个GO语言协程池库，本人稳定用于生产|https://github.com/panjf2000/ants|MIT|
+| 项目简要                                                        | 地址（点击访问）                                                  | 使用许可证                               |
+|-------------------------------------------------------------|-----------------------------------------------------------|-------------------------------------|
+| 这是一个GO语言协程池库，我们稳定用于生产。                                      | [ants](https://github.com/panjf2000/ants)                 | [MIT](#quoting-license-text)        |   
+| go语言map和struct互相解析的库。                                       | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#quoting-license-text)        |
+| 相对原生map, bigcache通过一些技巧减少GC的消耗，并可以设置缓存数据的过期时间，在同类库中各方面表现优秀。 | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#quoting-license-text) |
+| 一个无锁且并发安全的hashmap，在串行场景下性能低于原生map。                          | [hashmap](https://github.com/cornelk/hashmap)             | [Apache 2.0](#quoting-license-text) |
+
+### 工具库
+
+| 项目简要                                                                                   | 地址（点击访问）                                          | 使用许可证                               |
+|----------------------------------------------------------------------------------------|---------------------------------------------------|-------------------------------------|
+| 我认为比标准RFC文档UUID更聪明的做法，适用于字符串唯一键或雪花算法。                                                  | [ksuid](https://github.com/segmentio/ksuid)       | [MIT](#quoting-license-text)        |   
+| ffmpeg-python的Go语言实现，[FFmpeg](https://github.com/FFmpeg/FFmpeg) 是一个C语言开发的知名开源音视频数据处理库。 | [ffmpeg-go](https://github.com/u2takey/ffmpeg-go) | [Apache 2.0](#quoting-license-text) |
+
+### HTTP
+
+| 项目简要                                              | 地址（点击访问）                                    | 使用许可证                               |
+|---------------------------------------------------|---------------------------------------------|-------------------------------------|
+| 抖音集团开源的HTTP框架，根据文档中的基准测试，性能和稳定性均超过fasthttp框架，我信了。 | [hertz](https://github.com/cloudwego/hertz) | [Apache 2.0](#quoting-license-text) |   
+| HTTP客户端常用的库。                                      | [resty](https://github.com/go-resty/resty)  | [MIT](#quoting-license-text)        |
+
+### 容器能力
+
+| 项目简要                                                          | 地址（点击访问）                                               | 使用许可证                               |
+|---------------------------------------------------------------|--------------------------------------------------------|-------------------------------------|
+| 一个容器运行时工具，负责启动、停止、暂停、删除容器，通常和k8s类项目组合部署，一般不用做单节点或个人使用，无法构建镜像。 | [containerd](https://github.com/containerd/containerd) | [Apache 2.0](#quoting-license-text) |   
+
+### 生产项目
+
+| 项目简要                                                                        | 地址（点击访问）                                      | 使用许可证                               |
+|-----------------------------------------------------------------------------|-----------------------------------------------|-------------------------------------|
+| Casbin 是一个强大而高效的开源访问控制库，可以支持RBAC，ABAC，当然我们认为复杂的权限管理和绕口的专业名词，以及低代码可能并不适合所有人。 | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#quoting-license-text) |
+| 和casbin同出一家的身份验证项目（IAM/SSO）。                                                | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#quoting-license-text) |
+
+### 开发工具
+
+| 项目简要                     | 地址（点击访问）                                                          | 使用许可证                        |
+|--------------------------|-------------------------------------------------------------------|------------------------------|
+| 一个用于整理go语言import排序的开发插件。 | [goimports-reviser](https://github.com/incu6us/goimports-reviser) | [MIT](#quoting-license-text) |   
+
+### Gui
+
+| 项目简要                                                        | 地址（点击访问）                                | 使用许可证                          |
+|-------------------------------------------------------------|-----------------------------------------|--------------------------------|
+| fyne是一个go语言的gui框架，它不仅能制作桌面程序还能打包移动程序。虽然我讨厌CGO，但目前实在没什么好的选择。 | [fyne](https://github.com/fyne-io/fyne) | [BSD 3](#quoting-license-text) |   
+
+### 网络处理
+
+| 项目简要                                                   | 地址（点击访问）                               | 使用许可证                            |
+|--------------------------------------------------------|----------------------------------------|----------------------------------|
+| nps可以搭建起一个内网穿透代理，并拥有web界面的后台。我们不认为小型项目使用自建方案比商业产品有性价比。 | [nps](https://github.com/ehang-io/nps) | [GPL 3.0](#quoting-license-text) |   
+
+### 操作系统接口
+
+| 项目简要                                                                                                | 地址（点击访问）                                       | 使用许可证                          |
+|-----------------------------------------------------------------------------------------------------|------------------------------------------------|--------------------------------|
+| gopsutil是一个用于系统监控、分析和限制进程资源以及管理进程得库，它是python项目[psutil](https://github.com/giampaolo/psutil)的go语言实现。 | [gopsutil](https://github.com/shirou/gopsutil) | [BSD 3](#quoting-license-text) |   
+
+### Python
+
+## 脚本
+
+| 项目简要                           | 地址（点击访问）                                       | 使用许可证                        |
+|--------------------------------|------------------------------------------------|------------------------------|
+| 一个功能弱小的B站直播弹幕爬取脚本，简单好用，容易二次开发。 | [blivedm](https://github.com/xfgryujk/blivedm) | [MIT](#quoting-license-text) |   
+
+## Android
+
+### 工具库
+
+| 项目简要               | 地址（点击访问）                                                      | 使用许可证                               |
+|--------------------|---------------------------------------------------------------|-------------------------------------|
+| 一个好用的Android权限申请库。 | [XXPermissions](https://github.com/getActivity/XXPermissions) | [Apache 2.0](#quoting-license-text) |   
 
 # font
 
-|项目简要|地址|协议|
-|--|--|--|
-|霞鹜文楷：适合正文阅读的开源中文字体 |https://github.com/lxgw/LxgwWenKai|OFL1.1|
+关于OFL1.1 协议字体的忠告，该协议使用字体必须声明版权信息和许可证，而字体应用载体往往伴随着不可控的传播或条件限制无法编写注释。
+
+霞鹜文楷虽然在README页面标注了可以不注明版权信息，但该项目是基于谷歌Klee one的衍生作品，Klee one采用的是OFL1.1协议。
+
+| 项目简要           | 地址                                        | 使用许可证                                           |
+|----------------|-------------------------------------------|-------------------------------------------------|
+| 推荐使用阿里系免费商用字体。 | [官网](https://www.alibabafonts.com/#/home) | [参考官网法律声明](https://www.alibabafonts.com/#/more) |
+
+# quoting-license-text
+
+| 许可证                    | 原文                                                            |
+|------------------------|---------------------------------------------------------------|
+| MIT                    | https://opensource.org/license/mit                            |
+| AGPL 3.0               | https://www.gnu.org/licenses/agpl-3.0.txt                     |
+| GPL  3.0               | https://www.gnu.org/licenses/gpl-3.0.txt                      |
+| Apache 2.0             | https://www.apache.org/licenses/LICENSE-2.0.txt               |
+| BSD 3                  | https://opensource.org/license/bsd-3-clause                   |
+| CreativeML Open RAIL-M | https://github.com/CompVis/stable-diffusion/blob/main/LICENSE |
+| OFL1.1 2007            | https://openfontlicense.org/documents/OFL.txt                 |
+| Mulan PubL v2          | http://license.coscl.org.cn/MulanPubL-2.0                     |
