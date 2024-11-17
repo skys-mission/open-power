@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/skys-mission/open-power">
-    <img  src="./.images/LOGO.png" width="350" border="0" alt="open-power">
+    <img  src="./.images/logo.webp" width="100" border="0" alt="open-power">
   </a>
 </p>
 
@@ -23,147 +23,205 @@ development tools, operations tools, various protocols, fonts, and documentation
 
 # index
 
-- [Index](#index)
-- [AI](#ai)
-- [DEV](#dev)
+<!-- TOC -->
+* [open-power](#open-power)
+* [index](#index)
+* [AI](#ai)
+  * [out-of-the-box](#out-of-the-box)
+  * [Generative AI Models](#generative-ai-models)
+    * [Image Generation](#image-generation)
+      * [Image Generation](#image-generation-1)
+      * [Video Generation](#video-generation)
+    * [Large Language Models & Multimodal Models](#large-language-models--multimodal-models)
+  * [Tool Libraries](#tool-libraries)
+  * [Algorithm Frameworks](#algorithm-frameworks)
+* [DEV](#dev)
+  * [Protocols](#protocols)
+    * [RPC](#rpc)
+  * [Database](#database)
+  * [Golang](#golang)
+    * [Core Capabilities](#core-capabilities)
+    * [Utility Libraries](#utility-libraries)
+    * [HTTP](#http)
+    * [Container Capabilities](#container-capabilities)
+    * [GUI](#gui)
+    * [Operating System Interface](#operating-system-interface)
+    * [out-of-the-box](#out-of-the-box-1)
+    * [Development Tools](#development-tools)
+  * [Web Crawling](#web-crawling)
+    * [Targeted Crawlers](#targeted-crawlers)
+  * [Android](#android)
+    * [Utility Libraries](#utility-libraries-1)
+* [Font](#font)
+* [Protocol document link](#protocol-document-link)
+<!-- TOC -->
 
 # AI
 
-## Production-ready-tools
+## out-of-the-box
 
-| Project Summary                                                                                                                                                                                                                                                                                   | Address (click to visit)                                                          | License                           |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------|
-| Stable-diffusion-webui can build a web page for AI drawing with one click, making AI drawing simple. Currently, the ecosystem is very rich, and there are a large number of excellent plugins in the community.                                                                                   | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | [AGPL 3.0](#quoting-license-text) |
-| This is a production-level, low-code node editing mode Web project that operates the Diffusers library. Similarly, the community has a large number of workflow templates and plugins available.                                                                                                  | [ComfyUI](https://github.com/comfyanonymous/ComfyUI)                              | [GPL 3.0](#quoting-license-text)  |
-| A tool for separating vocals from audio, where the developer has trained most of the models included in the software package. Although the project’s README mentions that it is licensed under MIT, the MIT license file has been removed from the project, and the reason for this is not known. | [UVR](https://github.com/Anjok07/ultimatevocalremovergui)                         | [MIT](#quoting-license-text)      |
-| A classic face swapping project, where the owner of this project believes that such projects have no value beyond academic significance and only serve to subject vulnerable groups to online fraud.                                                                                              | [DeepFaceLive](https://github.com/iperov/DeepFaceLive)                            | [GPL 3.0](#quoting-license-text)  |
+| Project Summary                                                                                                                                                                                                                                                         | Main Features              | Address (Click to Visit)                                                           | License                               |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|------------------------------------------------------------------------------------|---------------------------------------|
+| Stable-diffusion-webui is a one-click solution to build AI image generation web interface, making AI image generation simple. With plugins, it also has video generation capabilities. Currently, the ecosystem is very rich with numerous excellent community plugins. | Image Generation           | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)  | [AGPL 3.0](#Protocol-document-link)   |
+| A production-grade low-code node editing AI workflow software. The community has numerous workflow templates and plugins.                                                                                                                                               | AI Workflow                | [ComfyUI](https://github.com/comfyanonymous/ComfyUI)                               | [GPL 3.0](#Protocol-document-link)    |
+| A more powerful audio processing integration project than UVR5-UI, with the author still active (as of November 17, 2024).                                                                                                                                              | Audio Separation/Denoising | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)   |
+| A classic face replacement project, please be aware of legal risks.                                                                                                                                                                                                     | Image Processing           | [DeepFaceLive](https://github.com/iperov/DeepFaceLive)                             | [GPL 3.0](#Protocol-document-link)    |
+| Compared to most discontinued SVC projects, RVC's author remains active, offering an out-of-the-box solution.                                                                                                                                                           | Voice Conversion           | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)        |
+| A langchain-based large language model project supporting RAG and Agent-related functions (an improved version of Langchain-ChatGLM).                                                                                                                                   | ChatGPT-like               | [Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)         | [Apache 2.0](#Protocol-document-link) |
+| An out-of-the-box ChatGPT-like project (API-based) with extensive features. If you want to quickly deploy a ChatGPT-like project, this might be your first choice.                                                                                                      | ChatGPT-like               | [open-webui](https://github.com/open-webui/open-webui)                             | [MIT](#Protocol-document-link)        |
 
-## Utility library
+## Generative AI Models
 
-| Project Summary                                                                                                                                                           | Address (click to visit)                              | License                             |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|-------------------------------------|
-| Huggingface’s open-source Diffusers is the go-to library for generating images, audio, and even 3D structures of molecules using the latest pre-trained diffusion models. | [diffusers](https://github.com/huggingface/diffusers) | [Apache 2.0](#quoting-license-text) |
+### Image Generation
 
-## Artificial Intelligence models
+#### Image Generation
 
-| Project Summary                                                                                                                                                                                                                                                                                | Address (click to visit)                                                        | License                                         |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------|
-| Stable-diffusion is currently the most well-known open-source text-to-image model. Due to reasons that are not entirely clear, as of May 7, 2024, the owner of this project believes that the subsequent versions released by Stability.ai are not as active in the community as this version. | [stable-diffusion](https://github.com/CompVis/stable-diffusion)                 | [CreativeML Open RAIL-M](#quoting-license-text) |
-| Stable Diffusion v1-5 is, in fact, the most active model in the community based on stable-diffusion as of now. However, the related technology has not been updated for a year (as of May 7, 2024).                                                                                            | [stable-diffusion v1-5](https://huggingface.co/runwayml/stable-diffusion-v1-5n) | [CreativeML Open RAIL-M](#quoting-license-text) |
+| Project Summary                                                                                                                                                                                                                     | Link (Click to Visit)                                                                           | License                                             |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| Stable Diffusion v1-5 is an improved version of CompVis's original version, currently having the most complete toolchain ecosystem among all image base models. (As of 20241117)                                                    | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
+| stable-diffusion-xl-base-1.0 is a high-definition version developed by stabilityai. Although some newer technologies have emerged, its toolchain ecosystem completeness (e.g., controlnet) is second only to sd1.5 (As of 20241117) | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
 
-## Algorithm frameworks
+#### Video Generation
 
-| Project Summary                                                                                 | Address (click to visit)                      | License                                                         |
-|-------------------------------------------------------------------------------------------------|-----------------------------------------------|-----------------------------------------------------------------|
-| If you don't know Pytorch, it means you know nothing about artificial intelligence development. | [pytorch](https://github.com/pytorch/pytorch) | [pytorch](https://github.com/pytorch/pytorch/blob/main/LICENSE) |
+| Project Summary                                                      | Link (Click to Visit)                         | License                                           |
+|----------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------------|
+| CogVideo is a video generation model released by Tsinghua University | [CogVideo](https://github.com/THUDM/CogVideo) | [Multiple Licenses](https://huggingface.co/THUDM) |
+
+### Large Language Models & Multimodal Models
+
+Multimodal models are usually modified versions based on large language models
+
+| Brief Description                                                                                                                                                        | Multimodal              | Address (Click to Visit)               | License                                                                                          |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------|
+| Llama is a large language model released by Meta, though supporting fewer languages, it's currently one of the most popular large language base models. (As of 20241117) | Some versions           | [Llama](https://www.llama.com/)        | [Independent License](https://www.llama.com/docs/how-to-guides/responsible-use-guide-resources/) |
+| Qwen is a large language model released by Alibaba, including versions for image understanding, audio understanding, mathematics, and code optimization.                 | Has multimodal versions | [QwenLM](https://github.com/QwenLM)    | [Multiple Licenses](https://huggingface.co/Qwen)                                                 |
+| GLM is a large language model released by Tsinghua University, with versions for image understanding, audio conversation, and code optimization.                         | Has multimodal versions | [GLM4](https://github.com/THUDM/GLM-4) | [Multiple Licenses](https://huggingface.co/THUDM)                                                |
+
+## Tool Libraries
+
+| Brief Description                                                                                                                                                                                                       | Development Language | Address (Click to Visit)                               | License                               |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|--------------------------------------------------------|---------------------------------------|
+| Huggingface's open-source Diffusers is the go-to library for the latest pre-trained diffusion models for generating images, audio, and even 3D molecular structures.                                                    | Python               | [diffusers](https://github.com/huggingface/diffusers)  | [Apache 2.0](#Protocol-document-link) |
+| An application-oriented development framework for large language models based on Python. Honestly, I don't think Python-based application frameworks are competitive, but including this due to langchain's popularity. | Python               | [langchain](https://github.com/langchain-ai/langchain) | [MIT](#Protocol-document-link)        |
+
+## Algorithm Frameworks
+
+| Brief Description                                                                                                                                 | Address (Click to Visit)                               | License                                                                     |
+|---------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------------------|
+| PyTorch is user-friendly, ideal for beginners, currently maintained by Meta.                                                                      | [pytorch](https://github.com/pytorch/pytorch)          | [Independent License](https://github.com/pytorch/pytorch/blob/main/LICENSE) |
+| TensorFlow is Google's engineered AI framework solution.                                                                                          | [tensorflow](https://github.com/tensorflow/tensorflow) | [Apache 2.0](#Protocol-document-link)                                       |
+| A Google AI framework that has received significant investment in recent years, characterized by higher performance but a steeper learning curve. | [jax](https://github.com/jax-ml/jax)                   | [Apache 2.0](#Protocol-document-link)                                       |
 
 # DEV
 
-## Cross-language
+## Protocols
 
 ### RPC
 
-We don’t believe that the pros and cons of various RPC protocols are fundamentally meaningful. Perhaps, it’s sufficient
-to just pick one and use it.
+We don't believe there are meaningful fundamental advantages or disadvantages between different RPC protocols - perhaps
+choosing any one would suffice.
 
-| Project Summary                                                                                                                                             | Address (click to visit)                   | License                             |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-------------------------------------|
-| gRPC is a language-agnostic RPC protocol introduced by Google, which uses HTTP/2 and increases performance through the use of a predefined fields protocol. | [grpc](https://github.com/grpc/grpc)       | [Apache 2.0](#quoting-license-text) |
-| If you don’t want to use gRPC, Thrift is a good alternative, but currently, the editors of this project are not familiar with this framework.               | [thrift](https://github.com/apache/thrift) | [Apache 2.0](#quoting-license-text) |
+| Project Description                                                                                                                      | Link (Click to Visit)                      | License                               |
+|------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|---------------------------------------|
+| GRPC is a cross-language RPC protocol from Google that uses HTTP/2 and predefined field protocols to increase performance.               | [grpc](https://github.com/grpc/grpc)       | [Apache 2.0](#Protocol-document-link) |
+| If you don't want to use GRPC, thrift is a good choice, though the current editors of this project are not familiar with this framework. | [thrift](https://github.com/apache/thrift) | [Apache 2.0](#Protocol-document-link) |
 
 ## Database
 
-| Project Summary                                                                                                                                                                                               | Address (click to visit)                            | License                                |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|----------------------------------------|
-| OceanBase Database is a distributed relational database, fully developed by Ant Group. Based on the Paxos protocol and distributed architecture, OceanBase achieves high availability and linear scalability. | [oceanbase](https://github.com/oceanbase/oceanbase) | [Mulan PubL v2](#quoting-license-text) |
+| Project Description                                                                                                                                                                                       | Link (Click to Visit)                               | License                                  |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|------------------------------------------|
+| OceanBase Database is a distributed relational database fully developed by Ant Group. OceanBase implements high availability and linear scaling based on the Paxos protocol and distributed architecture. | [oceanbase](https://github.com/oceanbase/oceanbase) | [Mulan PubL v2](#Protocol-document-link) |
 
 ## Golang
 
-### Basic capabilities
+### Core Capabilities
 
-| Project Summary                                                                                                                                                                                                     | Address (click to visit)                                  | License                             |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|-------------------------------------|
-| This is a goroutine pool library for the Go language that we reliably use in production.                                                                                                                            | [ants](https://github.com/panjf2000/ants)                 | [MIT](#quoting-license-text)        |   
-| A library for converting between Go language maps and structs.                                                                                                                                                      | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#quoting-license-text)        |
-| Relative to native maps, bigcache reduces GC overhead through various techniques and allows setting an expiration time for cached data, performing exceptionally well compared to similar libraries in all aspects. | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#quoting-license-text) |
-| A lock-free and concurrent-safe hashmap that performs less efficiently than the native map in serial scenarios.                                                                                                     | [hashmap](https://github.com/cornelk/hashmap)             | [Apache 2.0](#quoting-license-text) |
+| Project Description                                                                                                                                                         | Link (Click to Visit)                                     | License                               |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------|
+| A Golang goroutine pool library that we use stably in production.                                                                                                           | [ants](https://github.com/panjf2000/ants)                 | [MIT](#Protocol-document-link)        |
+| A library for parsing between Go maps and structs.                                                                                                                          | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
+| Compared to native map, bigcache reduces GC overhead through some techniques and can set cache data expiration time, showing excellent performance among similar libraries. | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
+| A lock-free and concurrency-safe hashmap that performs worse than native map in serial scenarios.                                                                           | [hashmap](https://github.com/cornelk/hashmap)             | [Apache 2.0](#Protocol-document-link) |
 
-### Toolkit
+### Utility Libraries
 
-| Project Summary                                                                                                                                                               | Address (click to visit)                          | License                             |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|-------------------------------------|
-| I believe it is a smarter approach than the standard RFC UUID, suitable for unique string keys or the snowflake algorithm.                                                    | [ksuid](https://github.com/segmentio/ksuid)       | [MIT](#quoting-license-text)        |   
-| A Go language implementation of ffmpeg-python, [FFmpeg](https://github.com/FFmpeg/FFmpeg) is a well-known open-source audio and video data processing library developed in C. | [ffmpeg-go](https://github.com/u2takey/ffmpeg-go) | [Apache 2.0](#quoting-license-text) |
+| Project Description                                                                                                                                                         | Link (Click to Visit)                             | License                               |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|---------------------------------------|
+| A smarter approach than standard RFC document UUID, suitable for unique string keys or snowflake algorithm.                                                                 | [ksuid](https://github.com/segmentio/ksuid)       | [MIT](#Protocol-document-link)        |
+| Go language implementation of ffmpeg-python, [FFmpeg](https://github.com/FFmpeg/FFmpeg) is a well-known open-source audio and video data processing library developed in C. | [ffmpeg-go](https://github.com/u2takey/ffmpeg-go) | [Apache 2.0](#Protocol-document-link) |
 
 ### HTTP
 
-| Project Summary                                                                                                                                                                                                   | Address (click to visit)                    | License                             |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-------------------------------------|
-| The HTTP framework open-sourced by Douyin Group (TikTok's parent company), according to the benchmarks in the documentation, outperforms the fasthttp framework in both performance and stability. I'm convinced. | [hertz](https://github.com/cloudwego/hertz) | [Apache 2.0](#quoting-license-text) |   
-| Commonly used HTTP client libraries.                                                                                                                                                                              | [resty](https://github.com/go-resty/resty)  | [MIT](#quoting-license-text)        |
+| Project Description                                                                                                                                                                       | Link (Click to Visit)                       | License                               |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|---------------------------------------|
+| An HTTP framework open-sourced by ByteDance, which according to benchmark tests in the documentation, surpasses the fasthttp framework in both performance and stability - we believe it. | [hertz](https://github.com/cloudwego/hertz) | [Apache 2.0](#Protocol-document-link) |
+| A commonly used HTTP client library.                                                                                                                                                      | [resty](https://github.com/go-resty/resty)  | [MIT](#Protocol-document-link)        |
 
-### Container capabilities
+### Container Capabilities
 
-| Project Summary                                                                                                                                                                                                                                             | Address (click to visit)                               | License                             |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|-------------------------------------|
-| A container runtime tool responsible for starting, stopping, pausing, and deleting containers. It is typically deployed in conjunction with Kubernetes-like projects and is generally not used for single nodes or personal use, as it cannot build images. | [containerd](https://github.com/containerd/containerd) | [Apache 2.0](#quoting-license-text) |   
+| Project Description                                                                                                                                                                                          | Link (Click to Visit)                                  | License                               |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|---------------------------------------|
+| A container runtime tool responsible for starting, stopping, pausing, and deleting containers, typically deployed with k8s-like projects, not intended for single-node or personal use, cannot build images. | [containerd](https://github.com/containerd/containerd) | [Apache 2.0](#Protocol-document-link) |
 
-### Production projects
+### GUI
 
-| Project Summary                                                                                                                                                                                                                                             | Address (click to visit)                      | License                             |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|-------------------------------------|
-| Casbin is a powerful and efficient open-source access control library that supports RBAC, ABAC, and more. However, we believe that complex permission management, arcane professional terminology, and low-code solutions may not be suitable for everyone. | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#quoting-license-text) |
-| An identity authentication project (IAM/SSO) from the same organization as Casbin.                                                                                                                                                                          | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#quoting-license-text) |
+| Project Description                                                                                                                                      | Link (Click to Visit)                   | License                          |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|----------------------------------|
+| Fyne is a Go GUI framework that can create both desktop and mobile applications. Although we dislike CGO, there aren't many good alternatives currently. | [fyne](https://github.com/fyne-io/fyne) | [BSD 3](#Protocol-document-link) |
 
-### Development tools
+### Operating System Interface
 
-| Project Summary                                       | Address (click to visit)                                          | License                      |
-|-------------------------------------------------------|-------------------------------------------------------------------|------------------------------|
-| A development plugin for sorting Go language imports. | [goimports-reviser](https://github.com/incu6us/goimports-reviser) | [MIT](#quoting-license-text) |   
+| Project Description                                                                                                                                                                                         | Link (Click to Visit)                          | License                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------|
+| Gopsutil is a library for system monitoring, analysis, process resource limitation, and process management. It's the Go implementation of the Python project [psutil](https://github.com/giampaolo/psutil). | [gopsutil](https://github.com/shirou/gopsutil) | [BSD 3](#Protocol-document-link) |
 
-### Gui
+### out-of-the-box
 
-| Project Summary                                                                                                                                                                           | Address (click to visit)                | License                        |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|--------------------------------|
-| Fyne is a GUI framework for the Go language that enables the creation of both desktop and mobile applications. Although I dislike CGO, there aren’t many good alternatives at the moment. | [fyne](https://github.com/fyne-io/fyne) | [BSD 3](#quoting-license-text) |   
+| Project Description                                                                                                                                                                                            | Type                  | Link (Click to Visit)                         | License                               |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|-----------------------------------------------|---------------------------------------|
+| Casbin is a powerful and efficient open-source access control library supporting RBAC, ABAC, though we believe complex permission management, technical jargon, and low-code may not be suitable for everyone. | Permission Management | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#Protocol-document-link) |
+| An authentication project (IAM/SSO) from the same creators as casbin.                                                                                                                                          | Authentication        | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#Protocol-document-link) |
+| NPS can set up an intranet penetration proxy with a web interface backend.                                                                                                                                     | Intranet Penetration  | [nps](https://github.com/ehang-io/nps)        | [GPL 3.0](#Protocol-document-link)    |
 
-### Network processing
+### Development Tools
 
-| Project Summary                                                                                                                                                                                            | Address (click to visit)               | License                          |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|----------------------------------|
-| nps can set up an intranet penetration proxy with a web interface for the backend. We don’t believe that using a self-built solution for small projects is cost-effective compared to commercial products. | [nps](https://github.com/ehang-io/nps) | [GPL 3.0](#quoting-license-text) |   
+| Project Description                                             | Link (Click to Visit)                                             | License                        |
+|-----------------------------------------------------------------|-------------------------------------------------------------------|--------------------------------|
+| A development plugin for organizing Go language import sorting. | [goimports-reviser](https://github.com/incu6us/goimports-reviser) | [MIT](#Protocol-document-link) |
 
-### Operating system interface
+## Web Crawling
 
-| Project Summary                                                                                                                                                                                                         | Address (click to visit)                       | License                        |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|--------------------------------|
-| gopsutil is a library used for system monitoring, analysis, limiting process resources, and managing processes. It is a Go language implementation of the Python project [psutil](https://github.com/giampaolo/psutil). | [gopsutil](https://github.com/shirou/gopsutil) | [BSD 3](#quoting-license-text) |   
+### Targeted Crawlers
 
-### Python
-
-## Script
-
-| Project Summary                                                                                                                         | Address (click to visit)                       | License                      |
-|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|------------------------------|
-| A simple and easy-to-use script for crawling Bilibili live chat with minimal features, and it’s easy to modify for further development. | [blivedm](https://github.com/xfgryujk/blivedm) | [MIT](#quoting-license-text) |   
+| Project Description                                                                                    | Link (Click to Visit)                          | License                        |
+|--------------------------------------------------------------------------------------------------------|------------------------------------------------|--------------------------------|
+| A lightweight Bilibili live streaming danmaku crawling script that's simple to use and easy to modify. | [blivedm](https://github.com/xfgryujk/blivedm) | [MIT](#Protocol-document-link) |
 
 ## Android
 
-### Toolkit
+### Utility Libraries
 
-| Project Summary                                          | Address (click to visit)                                      | License                             |
-|----------------------------------------------------------|---------------------------------------------------------------|-------------------------------------|
-| A user-friendly Android library for permission requests. | [XXPermissions](https://github.com/getActivity/XXPermissions) | [Apache 2.0](#quoting-license-text) |   
+| Project Description                          | Link (Click to Visit)                                         | License                               |
+|----------------------------------------------|---------------------------------------------------------------|---------------------------------------|
+| A useful Android permission request library. | [XXPermissions](https://github.com/getActivity/XXPermissions) | [Apache 2.0](#Protocol-document-link) |
 
-# quoting-license-text
+# Font
 
-| License                | Original Text                                                 |
-|------------------------|---------------------------------------------------------------|
-| MIT                    | https://opensource.org/license/mit                            |
-| AGPL 3.0               | https://www.gnu.org/licenses/agpl-3.0.txt                     |
-| GPL  3.0               | https://www.gnu.org/licenses/gpl-3.0.txt                      |
-| Apache 2.0             | https://www.apache.org/licenses/LICENSE-2.0.txt               |
-| BSD 3                  | https://opensource.org/license/bsd-3-clause                   |
-| CreativeML Open RAIL-M | https://github.com/CompVis/stable-diffusion/blob/main/LICENSE |
-| OFL1.1 2007            | https://openfontlicense.org/documents/OFL.txt                 |
-| Mulan PubL v2          | http://license.coscl.org.cn/MulanPubL-2.0                     |
+| Project Brief      | Language     | Commercial Use | Address                                      | License                                                        |
+|--------------------|--------------|----------------|----------------------------------------------|----------------------------------------------------------------|
+| Google Free Fonts  | Multilingual | Mostly allowed | [fonts.google.com](fonts.google.com)         | [Multiple agreements](https://developers.google.com/fonts/faq) |
+| Alibaba Free Fonts | Chinese      | Mostly allowed | [www.alibabafonts.com](www.alibabafonts.com) | [Independent agreement](https://www.alibabafonts.com/#/more)   |
+
+# Protocol document link
+
+| License                  | Original Link                                                                        |
+|--------------------------|--------------------------------------------------------------------------------------|
+| MIT                      | https://opensource.org/license/mit                                                   |
+| AGPL 3.0                 | https://www.gnu.org/licenses/agpl-3.0.txt                                            |
+| GPL  3.0                 | https://www.gnu.org/licenses/gpl-3.0.txt                                             |
+| Apache 2.0               | https://www.apache.org/licenses/LICENSE-2.0.txt                                      |
+| BSD 3                    | https://opensource.org/license/bsd-3-clause                                          |
+| CreativeML Open RAIL-M   | https://github.com/CompVis/stable-diffusion/blob/main/LICENSE                        |
+| CreativeML Open RAIL++-M | https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md |
+| OFL1.1 2007              | https://openfontlicense.org/documents/OFL.txt                                        |
+| Mulan PubL v2            | http://license.coscl.org.cn/MulanPubL-2.0                                            |
