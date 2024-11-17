@@ -30,8 +30,8 @@ development tools, operations tools, various protocols, fonts, and documentation
   * [out-of-the-box](#out-of-the-box)
   * [Generative AI Models](#generative-ai-models)
     * [Image Generation](#image-generation)
-      * [Images](#images)
-      * [Video](#video)
+      * [Image Generation](#image-generation-1)
+      * [Video Generation](#video-generation)
     * [Large Language Models & Multimodal Models](#large-language-models--multimodal-models)
   * [Tool Libraries](#tool-libraries)
   * [Algorithm Frameworks](#algorithm-frameworks)
@@ -74,17 +74,18 @@ development tools, operations tools, various protocols, fonts, and documentation
 
 ### Image Generation
 
-#### Images
+#### Image Generation
 
-| Brief Description                                                                                                                                                                                                        | Address (Click to Visit)                                                                        | License                                             |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| Stable Diffusion v1-5 is an improved version of CompVis's original version, currently remains the most complete image base model with the most comprehensive toolchain. (As of 20241117)                                 | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
-| stable-diffusion-xl-base-1.0 is a HD version developed by stabilityai. Although some newer technologies have emerged, the completeness of related toolchains such as controlnet is second only to sd1.5 (As of 20241117) | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
+| Project Summary                                                                                                                                                                                                                     | Link (Click to Visit)                                                                           | License                                             |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| Stable Diffusion v1-5 is an improved version of CompVis's original version, currently having the most complete toolchain ecosystem among all image base models. (As of 20241117)                                                    | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
+| stable-diffusion-xl-base-1.0 is a high-definition version developed by stabilityai. Although some newer technologies have emerged, its toolchain ecosystem completeness (e.g., controlnet) is second only to sd1.5 (As of 20241117) | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
 
-#### Video
+#### Video Generation
 
-Typically, video models generate videos from images, and the text-to-video process usually follows the path: text->
-image->video.
+| Project Summary                                                      | Link (Click to Visit)                         | License                                           |
+|----------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------------|
+| CogVideo is a video generation model released by Tsinghua University | [CogVideo](https://github.com/THUDM/CogVideo) | [Multiple Licenses](https://huggingface.co/THUDM) |
 
 ### Large Language Models & Multimodal Models
 
@@ -213,7 +214,7 @@ choosing any one would suffice.
 
 # Protocol document link
 
-| 许可证                      | 原文                                                                                   |
+| License                  | Original Link                                                                        |
 |--------------------------|--------------------------------------------------------------------------------------|
 | MIT                      | https://opensource.org/license/mit                                                   |
 | AGPL 3.0                 | https://www.gnu.org/licenses/agpl-3.0.txt                                            |
