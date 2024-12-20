@@ -135,7 +135,7 @@
 | 这是一个GO语言协程池库，我们稳定用于生产。                                      | [ants](https://github.com/panjf2000/ants)                 | [MIT](#Protocol-document-link)        |   
 | go语言map和struct互相解析的库。                                       | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
 | 相对原生map, bigcache通过一些技巧减少GC的消耗，并可以设置缓存数据的过期时间，在同类库中各方面表现优秀。 | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
-| 一个无锁且并发安全的hashmap，在串行场景下性能低于原生map。                          | [hashmap](https://github.com/cornelk/hashmap)             | [Apache 2.0](#Protocol-document-link) |
+| 我观察到cornelk/hashmap项目暂时不活跃，所以改用了haxmap                      | [haxmap](https://github.com/alphadose/haxmap)             | [MIT](#Protocol-document-link)        |
 
 ### 工具库
 

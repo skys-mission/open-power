@@ -141,7 +141,7 @@ choosing any one would suffice.
 | A Golang goroutine pool library that we use stably in production.                                                                                                           | [ants](https://github.com/panjf2000/ants)                 | [MIT](#Protocol-document-link)        |
 | A library for parsing between Go maps and structs.                                                                                                                          | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
 | Compared to native map, bigcache reduces GC overhead through some techniques and can set cache data expiration time, showing excellent performance among similar libraries. | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
-| A lock-free and concurrency-safe hashmap that performs worse than native map in serial scenarios.                                                                           | [hashmap](https://github.com/cornelk/hashmap)             | [Apache 2.0](#Protocol-document-link) |
+| I noticed that the cornelk/hashmap project is currently inactive, so I switched to using haxmap.                                                                            | [haxmap](https://github.com/alphadose/haxmap)             | [MIT](#Protocol-document-link)        |
 
 ### Utility Libraries
 
