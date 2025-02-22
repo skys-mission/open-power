@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/skys-mission/open-power">
-    <img  src="./.images/logo.webp" width="100" border="0" alt="open-power">
+    <img  src="./.images/logo.webp" width="400" border="0" alt="open-power">
   </a>
 </p>
 
@@ -8,19 +8,19 @@
 
 # open-power
 
-本仓库用于记录在生产力/性能/稳定/设计等因素中，有某一方面处于优良水平的开源项目。你可以在这里最快速的找到面向生产的选择，我们提倡快速完成自己的工作，而不是去研究细枝末节。
+本仓库用于记录在生产力/性能/稳定/设计等因素中，有某一方面处于优良水平的开源项目。你可以在这里最快速的找到面向生产的选择，我提倡快速完成自己的工作，而不是去研究细枝末节。
 
-功能重复的项目，我们往往只会记录1-2个，我们并不觉得列出所有同类型的开源项目有什么意义。
+功能重复的项目，我往往只会记录1-2个，我并不觉得列出所有同类型的开源项目有什么意义。
 
-我们的评判原则是：简单 > 复杂；易用 > 专业；稳定 > 性能；
+我们的评判原则是：简洁 > 复杂；易用 > 专业；稳定 > 性能；
 
 包括但不限于人工智能，区块链，图形图像，算法，开发工具，运维工具，各类协议，字体，文档的收集。
 
-# index
+# 目录
 
 <!-- TOC -->
 * [open-power](#open-power)
-* [index](#index)
+* [目录](#目录)
 * [AI](#ai)
   * [开箱即用](#开箱即用)
   * [生成式AI模型](#生成式ai模型)
@@ -55,15 +55,16 @@
 
 ## 开箱即用
 
-| 项目简要                                                                                  | 主要功能     | 地址（点击访问）                                                                           | 使用许可证                                 |
-|---------------------------------------------------------------------------------------|----------|------------------------------------------------------------------------------------|---------------------------------------|
-| Stable-diffusion-webui可以一键构建AI画图的web页面，让AI画图变得简单，使用插件也具备视频生成功能，目前生态已经非常丰富，社区存在大量优秀插件。 | 图像生成     | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)  | [AGPL 3.0](#Protocol-document-link)   |
-| 这是一个生产级别低代码节点编辑的AI流程编辑软件。社区存在大量的流程模版与插件。                                              | AI工作流    | [ComfyUI](https://github.com/comfyanonymous/ComfyUI)                               | [GPL 3.0](#Protocol-document-link)    |
-| 比UVR5-UI更强大的音频处理整合项目，作者目前仍在活跃（截止到20241117）。                                           | 音频分离/降噪  | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)   |
-| 一个经典的脸部替换项目，请注意法律风险。                                                                  | 图像处理     | [DeepFaceLive](https://github.com/iperov/DeepFaceLive)                             | [GPL 3.0](#Protocol-document-link)    |
-| 相对于大多数停更的SVC项目，RVC的作者仍在活跃，开箱即用。                                                       | 音色转化     | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)        |
-| 基于langchain的大语言模型llm项目，支持RAG和Agent相关功能（Langchain-ChatGLM的改进项目）。                       | 类ChatGPT | [Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)         | [Apache 2.0](#Protocol-document-link) |
-| 一个开箱即用的仿ChatGPT项目（基于API的），功能支持较多，如果你想快速落地一个类ChatGPT项目，或许这是首选。                         | 类ChatGPT | [open-webui](https://github.com/open-webui/open-webui)                             | [MIT](#Protocol-document-link)        |
+| 项目简要                                                                                  | 主要功能     | 地址（点击访问）                                                                           | 使用许可证                                      |
+|---------------------------------------------------------------------------------------|----------|------------------------------------------------------------------------------------|--------------------------------------------|
+| Stable-diffusion-webui可以一键构建AI画图的web页面，让AI画图变得简单，使用插件也具备视频生成功能，目前生态已经非常丰富，社区存在大量优秀插件。 | 图像生成     | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)  | [AGPL 3.0](#Protocol-document-link)        |
+| 这是一个生产级别低代码节点编辑的AI流程编辑软件。社区存在大量的流程模版与插件。                                              | AI工作流    | [ComfyUI](https://github.com/comfyanonymous/ComfyUI)                               | [GPL 3.0](#Protocol-document-link)         |
+| 比UVR5-UI更强大的音频处理整合项目，作者目前仍在活跃（截止到20250222）。                                           | 音频分离/降噪  | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)        |
+| 一个经典的脸部替换项目，请注意法律风险。                                                                  | 图像处理     | [DeepFaceLive](https://github.com/iperov/DeepFaceLive)                             | [GPL 3.0](#Protocol-document-link)         |
+| 相对于大多数停更的SVC项目，RVC的作者仍在活跃（截止到20250222），开箱即用。                                          | 音色转化     | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)             |
+| 基于langchain的大语言模型llm项目，支持RAG和Agent相关功能（Langchain-ChatGLM的改进项目）。                       | 类ChatGPT | [Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)         | [Apache 2.0](#Protocol-document-link)      |
+| 一个开箱即用的仿ChatGPT项目（基于API的），功能支持较多，如果你想快速落地一个类ChatGPT项目，或许这是首选。                         | 类ChatGPT | [open-webui](https://github.com/open-webui/open-webui)                             | [MIT](#Protocol-document-link)             |
+| Dify是目前最强大的（截止到20250222）AI-API开源聚合平台，可以定义工作流，Agent等模版。项目不是完全基于Apache 2.0的，再多租户上有限制。   | AI中台     | [dify](https://github.com/langgenius/dify)                                         | [多种协议](https://github.com/langgenius/dify) |
 
 ## 生成式AI模型
 
@@ -73,8 +74,8 @@
 
 | 项目简要                                                                                                              | 地址（点击访问）                                                                                        | 使用许可证                                               |
 |-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| stable diffusion v1-5 是CompVis原始版本的改进版本，目前仍是工具链最完善的图像底座模型没有之一。（截止到20241117）                                       | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
-| stable-diffusion-xl-base-1.0 由stabilityai开发的sd高清版本，虽然出现了一些比较新的技术，但关于相关工具链，例如controlnet等的完善程度仅次于sd1.5（截止到20241117） | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
+| stable diffusion v1-5 是CompVis原始版本的改进版本，目前仍是工具链最完善的图像底座模型没有之一。（截止到20250222）                                       | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
+| stable-diffusion-xl-base-1.0 由stabilityai开发的sd高清版本，虽然出现了一些比较新的技术，但关于相关工具链，例如controlnet等的完善程度仅次于sd1.5（截止到20250222） | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
 
 #### 视频生成
 
@@ -86,11 +87,12 @@
 
 多模态模型通常是基于大语言模型的改造版本
 
-| 项目简要                                                      | 多模态    | 地址（点击访问）                               | 使用许可证                                                                             |
-|-----------------------------------------------------------|--------|----------------------------------------|-----------------------------------------------------------------------------------|
-| llama由meta发布的大语言模型，但支持的语言较少，目前是最火的大语言底座模型之一。（截止到20241117） | 部分版本   | [Llama](https://www.llama.com/)        | [独立协议](https://www.llama.com/docs/how-to-guides/responsible-use-guide-resources/) |
-| qwen由阿里发布的大语言模型，包含图片理解，音频理解，数学，代码优化版本。                    | 有多模态版本 | [QwenLM](https://github.com/QwenLM)    | [多种协议](https://huggingface.co/Qwen)                                               |
-| glm由清华大学发布的大语言模型，有图片理解和音频对话，代码优化版本。                       | 有多模态版本 | [GLM4](https://github.com/THUDM/GLM-4) | [多种协议](https://huggingface.co/THUDM)                                              |
+| 项目简要                                   | 多模态    | 地址（点击访问）                                   | 使用许可证                                                                             |
+|----------------------------------------|--------|--------------------------------------------|-----------------------------------------------------------------------------------|
+| deepseek，伟大无需多言，抛开训练成本，deepseek依旧伟大    | 有多模态版本 | [deepseek](https://github.com/deepseek-ai) | [MIT](#Protocol-document-link)                                                    |
+| llama由meta发布的大语言模型，开源生态链比较丰富，但支持的语种较少。 | 部分版本   | [Llama](https://www.llama.com/)            | [独立协议](https://www.llama.com/docs/how-to-guides/responsible-use-guide-resources/) |
+| qwen由阿里发布的大语言模型，包含图片理解，音频理解，数学，代码优化版本。 | 有多模态版本 | [QwenLM](https://github.com/QwenLM)        | [多种协议](https://huggingface.co/Qwen)                                               |
+| glm由清华大学发布的大语言模型，有图片理解和音频对话，代码优化版本。    | 有多模态版本 | [GLM4](https://github.com/THUDM/GLM-4)     | [多种协议](https://huggingface.co/THUDM)                                              |
 
 ## 工具库
 
@@ -113,29 +115,29 @@
 
 ### RPC
 
-我们不认为各种RPC协议的优势劣势有什么本质上的意义，或许随便挑一种来用就可以了。
-
-| 项目简要                                              | 地址（点击访问）                                   | 使用许可证                                 |
-|---------------------------------------------------|--------------------------------------------|---------------------------------------|
-| GRPC是Google推出的跨语言RPC协议，使用HTTP/2并通过预先定义字段协议从而增加性能。 | [grpc](https://github.com/grpc/grpc)       | [Apache 2.0](#Protocol-document-link) |
-| 如果你不想使用GRPC，thrift是一个好的选择，但目前本项目的编辑人员并不了解这个框架。    | [thrift](https://github.com/apache/thrift) | [Apache 2.0](#Protocol-document-link) |
+| 项目简要                                                           | 地址（点击访问）                                   | 使用许可证                                 |
+|----------------------------------------------------------------|--------------------------------------------|---------------------------------------|
+| GRPC是Google推出的跨语言RPC协议，使用HTTP/2并通过预先定义字段协议从而增加性能。 灵活性不如thrift。 | [grpc](https://github.com/grpc/grpc)       | [Apache 2.0](#Protocol-document-link) |
+| thrift是meta推出的跨语言RPC协议，可以自定义协议，原生不支持流式传输。性能不如GRPC。             | [thrift](https://github.com/apache/thrift) | [Apache 2.0](#Protocol-document-link) |
 
 ## 数据库
 
 | 项目简要                                                                                   | 地址（点击访问）                                            | 使用许可证                                    |
 |----------------------------------------------------------------------------------------|-----------------------------------------------------|------------------------------------------|
+| TIDB金融级分布式数据库，兼容MysqlAPI，同时支持OLAP和OLTP。相较于OceanBase，TIDB的开源氛围更好。                       | [tidb](https://github.com/pingcap/tidb)             | [Apache 2.0](#Protocol-document-link)    |
 | OceanBase Database 是一个分布式关系型数据库。完全由蚂蚁集团自主研发。 OceanBase 基于 Paxos 协议以及分布式架构，实现了高可用和线性扩展。 | [oceanbase](https://github.com/oceanbase/oceanbase) | [Mulan PubL v2](#Protocol-document-link) |
 
 ## Golang
 
 ### 基础能力
 
-| 项目简要                                                        | 地址（点击访问）                                                  | 使用许可证                                 |
-|-------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------|
-| 这是一个GO语言协程池库，我们稳定用于生产。                                      | [ants](https://github.com/panjf2000/ants)                 | [MIT](#Protocol-document-link)        |   
-| go语言map和struct互相解析的库。                                       | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
-| 相对原生map, bigcache通过一些技巧减少GC的消耗，并可以设置缓存数据的过期时间，在同类库中各方面表现优秀。 | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
-| 我观察到cornelk/hashmap项目暂时不活跃，所以改用了haxmap                      | [haxmap](https://github.com/alphadose/haxmap)             | [MIT](#Protocol-document-link)        |
+| 项目简要                   | 地址（点击访问）                                                  | 使用许可证                                 |
+|------------------------|-----------------------------------------------------------|---------------------------------------|
+| 这是一个GO语言协程池库，我们稳定用于生产。 | [ants](https://github.com/panjf2000/ants)                 | [MIT](#Protocol-document-link)        |   
+| go语言map和struct互相解析的库。  | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
+| 开箱即用的内存缓存库，也可以配置最大缓存大小 | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
+| 内存缓存库，相较于bigcache配置更简单 | [freecache](https://github.com/coocood/freecache)         | [MIT](#Protocol-document-link)        |
+| 无锁且并发安全的Map            | [haxmap](https://github.com/alphadose/haxmap)             | [MIT](#Protocol-document-link)        |
 
 ### 工具库
 
@@ -146,10 +148,10 @@
 
 ### HTTP
 
-| 项目简要                                              | 地址（点击访问）                                    | 使用许可证                                 |
-|---------------------------------------------------|---------------------------------------------|---------------------------------------|
-| 抖音集团开源的HTTP框架，根据文档中的基准测试，性能和稳定性均超过fasthttp框架，我信了。 | [hertz](https://github.com/cloudwego/hertz) | [Apache 2.0](#Protocol-document-link) |   
-| HTTP客户端常用的库。                                      | [resty](https://github.com/go-resty/resty)  | [MIT](#Protocol-document-link)        |
+| 项目简要                                          | 地址（点击访问）                                    | 使用许可证                                 |
+|-----------------------------------------------|---------------------------------------------|---------------------------------------|
+| 抖音集团开源的HTTP框架，根据文档中的基准测试，性能和稳定性均超过fasthttp框架。 | [hertz](https://github.com/cloudwego/hertz) | [Apache 2.0](#Protocol-document-link) |   
+| HTTP客户端常用的库。                                  | [resty](https://github.com/go-resty/resty)  | [MIT](#Protocol-document-link)        |
 
 ### 容器能力
 
