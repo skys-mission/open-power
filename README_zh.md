@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/skys-mission/open-power">
-    <img  src="./.images/logo.webp" width="400" border="0" alt="open-power">
+    <img  src="./.images/logo.webp?version=0.1" width="400" border="0" alt="open-power">
   </a>
 </p>
 
