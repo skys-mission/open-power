@@ -14,7 +14,6 @@
 
 欢迎讨论与贡献。
 
-
 # 目录
 
 <!-- TOC -->
@@ -69,9 +68,9 @@
 
 ### AI中台
 
-| 项目简要                                                                                | 主要功能 | 地址（点击访问）                                   | 使用许可证                                      |
-|-------------------------------------------------------------------------------------|------|--------------------------------------------|--------------------------------------------|
-| Dify是目前最强大的（截止到20250222）AI-API开源聚合平台，可以定义工作流，Agent等模版。项目不是完全基于Apache 2.0的，再多租户上有限制。 | AI中台 | [dify](https://github.com/langgenius/dify) | [多种协议](https://github.com/langgenius/dify) |
+| 项目简要                                                                          | 主要功能 | 地址（点击访问）                                   | 使用许可证                                      |
+|-------------------------------------------------------------------------------|------|--------------------------------------------|--------------------------------------------|
+| Dify是目前最强大的（截止到20250309）开源AI中台，可以定义工作流，Agent等模版。项目不是完全基于Apache 2.0的，再多租户上有限制。 | AI中台 | [dify](https://github.com/langgenius/dify) | [多种协议](https://github.com/langgenius/dify) |
 
 ### AI工具
 
@@ -94,7 +93,7 @@
 |----------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------|---------------------------------------|
 | 比UVR5-UI更强大的音频处理整合项目，作者目前仍在活跃（截止到20250222）。                                | 音频分离/降噪 | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)   |
 | 相对于大多数停更的SVC项目，RVC的作者仍在活跃（截止到20250222），开箱即用。                               | 音色转化    | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)        |
-| 目前仍在更新的效果最好的文字转语音体系，社区活跃（截止到20250309）                                      | 文字转语音   | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)                               | [MIT](#Protocol-document-link)        |
+| 目前仍在更新的效果最好的文字转语音体系之一，社区活跃（截止到20250309）                                    | 文字转语音   | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)                               | [MIT](#Protocol-document-link)        |
 | CosyVoice阿里开源的TTS体系，在一些场景下表现比GPT-SoVITS好，可惜目前社区仍不活跃，主要依靠官方支持。（截止到20250309） | 文字转语音   | [CosyVoice](https://github.com/FunAudioLLM/CosyVoice)                              | [Apache 2.0](#Protocol-document-link) |
 
 #### 其它
@@ -110,7 +109,6 @@
 |-----------------------------------------------------------------------------|------|-----------------------------------------------|---------------------------------------|
 | casbin 是一个强大而高效的开源访问控制库，可以支持RBAC，ABAC，当然我们认为复杂的权限管理和绕口的专业名词，以及低代码可能并不适合所有人。 | 权限管理 | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#Protocol-document-link) |
 | 和casbin同出一家的身份验证项目（IAM/SSO）。                                                | 身份验证 | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#Protocol-document-link) |
-| nps可以搭建起一个内网穿透代理，并拥有web界面的后台。                                               | 内网穿透 | [nps](https://github.com/ehang-io/nps)        | [GPL 3.0](#Protocol-document-link)    |
 
 ## 网络控制
 

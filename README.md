@@ -8,7 +8,8 @@ Other languages: [简体中文](README_zh.md), (Currently unable to translate mo
 
 # open-power
 
-This repository is used to record open source projects that excel in factors such as productivity, performance, stability, or design.
+This repository is used to record open source projects that excel in factors such as productivity, performance,
+stability, or design.
 
 You can quickly find the technology stack you need here.
 
@@ -68,9 +69,9 @@ Discussions and contributions are welcome.
 
 ### AI Middleware
 
-| Brief Description                                                                                                                                                                            | Main Features | Link (Click to Visit)                      | License                                                 |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------|---------------------------------------------------------|
-| Dify is the most powerful (as of 2025-02-22) open-source AI-API aggregation platform, supporting workflows, agent templates, etc. Note: It has multi-tenant limitations under its licensing. | AI Middleware | [dify](https://github.com/langgenius/dify) | [Multiple Licenses](https://github.com/langgenius/dify) |
+| Brief Description                                                                                                                                                                                                     | Main Features | Link (Click to Visit)                      | License                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------|---------------------------------------------------------|
+| Dify is currently the most powerful (as of 20250309) open-source AI platform, capable of defining workflows, agent templates, etc. The project is not fully based on Apache 2.0 and has limitations on multi-tenancy. | AI Middleware | [dify](https://github.com/langgenius/dify) | [Multiple Licenses](https://github.com/langgenius/dify) |
 
 ### AI Tools
 
@@ -89,12 +90,12 @@ Discussions and contributions are welcome.
 
 #### Audio Processing
 
-| Brief Description                                                                                                                   | Main Features     | Link (Click to Visit)                                                              | License                               |
-|-------------------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------------------------------------------------------------|---------------------------------------|
-| A more powerful audio processing toolkit than UVR5-UI, actively maintained (as of 2025-02-22).                                      | Audio Sep/Denoise | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)   |
-| An actively maintained SVC project (as of 2025-02-22) with out-of-the-box usability.                                                | Voice Conversion  | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)        |
-| State-of-the-art text-to-speech system with active community (as of 2025-03-09).                                                    | TTS               | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)                               | [MIT](#Protocol-document-link)        |
-| Alibaba's open-source TTS system, outperforming GPT-SoVITS in some scenarios but with limited community support (as of 2025-03-09). | TTS               | [CosyVoice](https://github.com/FunAudioLLM/CosyVoice)                              | [Apache 2.0](#Protocol-document-link) |
+| Brief Description                                                                                                | Main Features     | Link (Click to Visit)                                                              | License                               |
+|------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------------------------------------------------------------|---------------------------------------|
+| A more powerful audio processing toolkit than UVR5-UI, actively maintained (as of 2025-02-22).                   | Audio Sep/Denoise | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)   |
+| An actively maintained SVC project (as of 2025-02-22) with out-of-the-box usability.                             | Voice Conversion  | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)        |
+| State-of-the-art text-to-speech system with active community (as of 2025-03-09).                                 | TTS               | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)                               | [MIT](#Protocol-document-link)        |
+| Currently one of the best text-to-speech systems still being updated, with an active community (as of 20250309). | TTS               | [CosyVoice](https://github.com/FunAudioLLM/CosyVoice)                              | [Apache 2.0](#Protocol-document-link) |
 
 #### Others
 
@@ -105,11 +106,10 @@ Discussions and contributions are welcome.
 
 ## Access Control
 
-| Brief Description                                                                         | Type          | Link (Click to Visit)                         | License                               |
-|-------------------------------------------------------------------------------------------|---------------|-----------------------------------------------|---------------------------------------|
-| Casbin: A powerful and efficient open-source access control library supporting RBAC/ABAC. | AuthZ         | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#Protocol-document-link) |
-| Casdoor: Identity management (IAM/SSO) from the same developers as Casbin.                | AuthN         | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#Protocol-document-link) |
-| NPS: Intranet penetration proxy with web-based management.                                | Intranet Tool | [nps](https://github.com/ehang-io/nps)        | [GPL 3.0](#Protocol-document-link)    |
+| Brief Description                                                                         | Type  | Link (Click to Visit)                         | License                               |
+|-------------------------------------------------------------------------------------------|-------|-----------------------------------------------|---------------------------------------|
+| Casbin: A powerful and efficient open-source access control library supporting RBAC/ABAC. | AuthZ | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#Protocol-document-link) |
+| Casdoor: Identity management (IAM/SSO) from the same developers as Casbin.                | AuthN | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#Protocol-document-link) |
 
 ## Network Control
 
