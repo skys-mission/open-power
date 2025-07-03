@@ -56,6 +56,9 @@ Discussions and contributions are welcome.
     * [HTTP](#http)
       * [Server](#server)
       * [Client](#client)
+    * [RPC](#rpc-1)
+      * [Server](#server-1)
+    * [Server Framework](#server-framework)
     * [GUI](#gui)
     * [OS Interfaces](#os-interfaces)
 * [Java](#java)
@@ -247,6 +250,20 @@ Multimodal models are usually modified versions based on large language models.
 | Project Summary                      | Link (Click to Visit)                      | License                         |
 |--------------------------------------|--------------------------------------------|---------------------------------|
 | A commonly used HTTP client library. | [resty](https://github.com/go-resty/resty) | [MIT](#protocol-document-links) |
+
+### RPC
+
+#### Server
+
+| Brief Description                                                                                                                                                                                                                                                                                                                           | Address (Click to Visit)                    | License                                |  
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|  
+| An RPC server framework open-sourced by ByteDance, utilizing the high-performance network library also open-sourced by ByteDance. Currently, it primarily supports Thrift, and while the project indicates support for gRPC, the officially main supported protocol is Thrift, featuring a self-developed high-performance parsing library. | [kitex](https://github.com/cloudwego/kitex) | [Apache 2.0](#protocol-document-links) |  
+
+### Server Framework
+
+| Brief Description                                                                                                                                                                                                                                                                                | Address (Click to Visit)                      | License                         |  
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|---------------------------------|  
+| A Go language open-source framework led by bilibili. It is well-balanced, easy to use, and has a mature ecosystem. If you are proficient in the gRPC ecosystem, you can use this framework to quickly build your MVP. The template project starts both an HTTP and a gRPC server simultaneously. | [kratos](https://github.com/go-kratos/kratos) | [MIT](#protocol-document-links) |  
 
 ### GUI
 
