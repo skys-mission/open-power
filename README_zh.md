@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/skys-mission/open-power">
-    <img  src="./.images/logo.webp?version=0.1" width="400" border="0" alt="open-power">
+    <img  src="./.images/logo.webp?version=0.2" width="300" border="0" alt="open-power">
   </a>
 </p>
 
@@ -73,9 +73,10 @@
 
 ### AI中台
 
-| 项目简要                                                                             | 主要功能 | 地址（点击访问）                                   | 使用许可证                                      |
-|----------------------------------------------------------------------------------|------|--------------------------------------------|--------------------------------------------|
-| Dify是目前最强大的（截止到20250309）开源大语言模型中台，可以定义工作流，Agent等模版。项目不是完全基于Apache 2.0的，再多租户上有限制。 | AI中台 | [dify](https://github.com/langgenius/dify) | [多种协议](https://github.com/langgenius/dify) |
+| 项目简要                                                                                         | 主要功能 | 地址（点击访问）                                        | 使用许可证                                      |
+|----------------------------------------------------------------------------------------------|------|-------------------------------------------------|--------------------------------------------|
+| Coze-Studio是抖音集团开源的基于LLM生态的AI功能开发平台，在商业版本中有出色的表现，可定义智能体，应用，工作流等模版。RAG相关功能对于dify来说有更专业和丰富的功能。 | AI中台 | [coze](https://github.com/coze-dev/coze-studio) | [Apache 2.0](#Protocol-document-link)      |
+| Dify是目前最活跃的基于LLM生态的AI功能开发平台，可以定义工作流，Agent等模版。项目不是完全基于Apache 2.0的，再多租户上有限制。                   | AI中台 | [dify](https://github.com/langgenius/dify)      | [多种协议](https://github.com/langgenius/dify) |
 
 ### AI工具
 

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/skys-mission/open-power">
-    <img  src="./.images/logo.webp?version=0.1" width="400" border="0" alt="open-power">
+    <img  src="./.images/logo.webp?version=0.2" width="300" border="0" alt="open-power">
   </a>
 </p>
 
@@ -74,9 +74,10 @@ Discussions and contributions are welcome.
 
 ### AI Middle Platform
 
-| Project Summary                                                                                                                                                                                                                                    | Main Features      | Link (Click to Visit)                      | License                                                 |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------------------------------|---------------------------------------------------------|
-| Dify is currently the most powerful (as of 20250309) open-source large language model middle platform, capable of defining workflows, Agent templates, etc. The project is not entirely based on Apache 2.0 and has restrictions on multi-tenancy. | AI Middle Platform | [dify](https://github.com/langgenius/dify) | [Multiple Licenses](https://github.com/langgenius/dify) |
+| Project Summary                                                                                                                                                                                                                                                                                                                      | Main Features | Link (Click to Visit)                             | License                                                   |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------|-----------------------------------------------------------|
+| Coze-Studio is an open-source AI application development platform based on the LLM ecosystem by TikTok Group, demonstrating strong performance in its commercial version. It supports defining templates for agents, applications, workflows, etc. Its RAG-related features are more professional and feature-rich compared to Dify. | AI Platform   | [coze](https://github.com/coze-dev/coze-studio  ) | [Apache 2.0](#Protocol-document-link)                     |
+| Dify is currently the most active LLM-based AI application development platform, supporting the definition of workflows, agents, and other templates. The project is not fully licensed under Apache 2.0 and has limitations regarding multi-tenancy.                                                                                | AI Platform   | [dify](https://github.com/langgenius/dify  )      | [Multiple Licenses](https://github.com/langgenius/dify  ) |
 
 ### AI Tools
 
