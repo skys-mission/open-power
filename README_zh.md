@@ -174,8 +174,9 @@
 
 | 项目简要                                                            | 多模态    | 地址（点击访问）                                   | 使用许可证                               |
 |-----------------------------------------------------------------|--------|--------------------------------------------|-------------------------------------|
-| 25年初一鸣惊人的deepseek，目前相较于claude，qwen的顶级模型在一些场景下已经略显落后，截止到20250703 | 有多模态版本 | [deepseek](https://github.com/deepseek-ai) | [MIT](#Protocol-document-link)      |
+| 25年初一鸣惊人的deepseek，目前相较于claude，qwen的顶级模型在一些场景下已经略显落后，但在一些非标准测试中仍有惊人表现 | 多模态版本处于试验阶段 | [deepseek](https://github.com/deepseek-ai) | [MIT](#Protocol-document-link)      |
 | qwen由阿里发布的大语言模型，包含图片理解，音频理解，数学，代码优化版本。                          | 有多模态版本 | [QwenLM](https://github.com/QwenLM)        | [多种协议](https://huggingface.co/Qwen) |                                           |
+| 原清华团队先改名zai-org并商业化转型的公司，在24，25年的开源LLM中都有不错的表现，多次在常见测试中追平同期SOTA闭源模型                         | 有多模态版本 | [GLM](https://huggingface.co/zai-org)        | [MIT](#Protocol-document-link) |                                           |
 
 # 语言能力
 
