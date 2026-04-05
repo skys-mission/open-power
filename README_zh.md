@@ -1,55 +1,58 @@
 <p align="center">
   <a href="https://github.com/skys-mission/open-power">
-    <img  src="./.images/logo.webp?version=0.2" width="300" border="0" alt="open-power">
+    <img  src="./.images/logo.webp?version=0.3" width="170" border="0" alt="open-power">
   </a>
 </p>
 
-其它语言：[English](README.md), (Currently unable to translate more)
+其它语言：[English](README.md)
 
 # open-power
 
-本仓库用于记录在生产力/性能/稳定/设计等因素中，有某一方面处于优良水平的开源项目。
+> 开源技术选型索引，聚焦 AI 模型、MCP、编码代理、基础设施与语言生态能力。
 
-你可以在这里最快速得到自己需要的技术选型。
-
-欢迎讨论与贡献。
+覆盖常用开源项目、协议与工具链，便于快速调研、对比与选型。
 
 # 目录
 
 <!-- TOC -->
 * [open-power](#open-power)
 * [目录](#目录)
-* [项目](#项目)
-  * [AI](#ai)
-    * [AI中台](#ai中台)
-    * [AI工具](#ai工具)
-      * [通用工具](#通用工具)
-      * [图形图像](#图形图像)
-      * [音频处理](#音频处理)
-      * [其它](#其它)
+* [AI](#ai)
+  * [AI模型](#ai模型)
+    * [大语言模型与多模态模型](#大语言模型与多模态模型)
+    * [生成式AI模型](#生成式ai模型)
+      * [图像生成模型](#图像生成模型)
+        * [图片生成](#图片生成)
+        * [视频生成](#视频生成)
+  * [AI协议与标准](#ai协议与标准)
+    * [模型上下文协议](#模型上下文协议)
+  * [AI工作流](#ai工作流)
+  * [AI工具](#ai工具)
+    * [图像生成](#图像生成)
+    * [音频处理](#音频处理)
+      * [音频分离与降噪](#音频分离与降噪)
+      * [音色转换](#音色转换)
+      * [文字转语音](#文字转语音)
+    * [编码代理](#编码代理)
+    * [其它](#其它)
+* [基础设施](#基础设施)
   * [权限控制](#权限控制)
   * [网络控制](#网络控制)
-  * [消息中间件](#消息中间件)
-  * [OPS](#ops)
-  * [CI/CD](#cicd)
+  * [数据存储与缓存](#数据存储与缓存)
+  * [交付与镜像构建](#交付与镜像构建)
     * [CD](#cd)
     * [容器能力](#容器能力)
-* [AI模型](#ai模型)
-  * [生成式AI模型](#生成式ai模型)
-    * [扩散模型](#扩散模型)
-      * [图片生成](#图片生成)
-      * [视频生成](#视频生成)
-  * [大语言模型&多模态理解模型&自回归多模态模型](#大语言模型多模态理解模型自回归多模态模型)
 * [语言能力](#语言能力)
   * [跨语言框架](#跨语言框架)
     * [RPC](#rpc)
   * [Python](#python)
     * [AI能力](#ai能力)
-      * [AI工具库](#ai工具库)
+      * [LLM应用框架](#llm应用框架)
+      * [模型训练与推理工具](#模型训练与推理工具)
       * [算法框架](#算法框架)
   * [Golang](#golang)
     * [AI能力](#ai能力-1)
-      * [AI工具库](#ai工具库-1)
+      * [LLM应用框架](#llm应用框架-1)
     * [基础能力](#基础能力)
     * [工具库](#工具库)
     * [HTTP](#http)
@@ -57,127 +60,146 @@
       * [Client](#client)
     * [RPC](#rpc-1)
       * [Server](#server-1)
-    * [Server-frame](#server-frame)
-    * [Gui](#gui)
+    * [服务框架](#服务框架)
+    * [GUI](#gui)
     * [操作系统接口](#操作系统接口)
 * [Java](#java)
   * [Android](#android)
     * [权限管理](#权限管理)
-* [Font](#font)
-* [Protocol document link](#protocol-document-link)
+* [字体](#字体)
+* [许可证原文链接](#Protocol-document-link)
 <!-- TOC -->
 
-# 项目
+# AI
 
-## AI
+## AI模型
 
-### AI中台
+### 大语言模型与多模态模型
 
-| 项目简要                                                                                                                                                          | 主要功能 | 地址（点击访问）                                | 使用许可证                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------- | ---------------------------------------------- |
-| Coze-Studio是抖音集团开源的基于LLM生态的AI功能开发平台，在商业版本中有出色的表现，可定义智能体，应用，工作流等模版。RAG相关功能对于dify来说有更专业和丰富的功能。 | AI中台   | [coze](https://github.com/coze-dev/coze-studio) | [Apache 2.0](#Protocol-document-link)          |
-| Dify是目前最活跃的基于LLM生态的AI功能开发平台，可以定义工作流，Agent等模版。项目不是完全基于Apache 2.0的，再多租户上有限制。                                      | AI中台   | [dify](https://github.com/langgenius/dify)      | [多种协议](https://github.com/langgenius/dify) |
+多模态模型通常是基于大语言模型的改造版本。
 
-### AI工具
+| 项目简要                                                                                                                                                              | 多模态                 | 地址（点击访问）                           | 协议情况       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------------ | -------------- |
+| DeepSeek 是开源大模型系列，覆盖推理与多模态等方向。                                                                                                                | 多模态版本处于试验阶段 | [deepseek](https://github.com/deepseek-ai) | 按具体模型而定 |
+| Qwen 是阿里开源的大模型系列，覆盖文本、图像理解、音频、数学与代码等多类能力。                                                                                      | 有多模态版本           | [QwenLM](https://github.com/QwenLM)        | 按具体模型而定 |
+| GLM 是 zai-org 推出的开源大模型系列，覆盖通用、多模态与智能体相关能力。                                                                                             | 有多模态版本           | [GLM](https://huggingface.co/zai-org)      | 按具体模型而定 |
+| Kimi 是 Moonshot AI 推出的开源模型系列，覆盖通用与推理能力方向。                                                                                                  | 有多模态版本           | [KIMI](https://github.com/MoonshotAI)      | 按具体模型而定 |
 
-#### 通用工具
+### 生成式AI模型
 
-| 项目简要                                                                       | 主要功能 | 地址（点击访问）                                     | 使用许可证                         |
-| ------------------------------------------------------------------------------ | -------- | ---------------------------------------------------- | ---------------------------------- |
-| 这是一个生产级别低代码节点编辑的AI流程编辑软件。社区存在大量的流程模版与插件。 | AI工作流 | [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | [GPL 3.0](#Protocol-document-link) |
+#### 图像生成模型
 
-#### 图形图像
+##### 图片生成
+
+| 项目简要                                                                                                                                                          | 地址（点击访问）                                                                                | 使用许可证                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| stable diffusion v1-5 是经典图像生成基座，具备成熟的 WebUI / ComfyUI / LoRA / ControlNet 生态支持。                                                              | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
+| stable-diffusion-xl-base-1.0 是经典高清图像生成基座，在画质、分辨率与社区支持之间保持较好平衡。                                                                  | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
+| Qwen-Image 是 20B MMDiT 图像基座，兼顾生成与编辑，在中文文字渲染与排版控制方面表现突出。                                                                          | [Qwen-Image](https://github.com/QwenLM/Qwen-Image)                                               | [Apache 2.0](#Protocol-document-link)               |
+| HunyuanImage-3.0 是原生多模态自回归图像生成模型，技术路线较新，部署资源需求较高。                                                                                 | [HunyuanImage-3.0](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0)                         | [独立协议](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/blob/main/LICENSE) |
+
+##### 视频生成
+
+| 项目简要                                                                                                           | 地址（点击访问）                          | 使用许可证                            |
+| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ------------------------------------- |
+| 阿里开源的视频生成模型系列，提供多个版本。 | [Wan-Video](https://github.com/Wan-Video) | [Apache 2.0](#Protocol-document-link) |
+
+## AI协议与标准
+
+### 模型上下文协议
+
+| 项目简要                                                                                                                                           | 类型       | 地址（点击访问）                                                     | 使用许可证                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------- | ------------------------------------- |
+| Model Context Protocol（MCP）是面向 LLM 应用与外部数据源、工具集成的开放协议，定义统一的上下文交换与客户端/服务端交互方式，并形成了规范、SDK 与服务端生态。 | AI协议标准 | [MCP](https://github.com/modelcontextprotocol/modelcontextprotocol) | [MIT](#Protocol-document-link)        |
+
+## AI工作流
+
+| 项目简要                                                                                                                                                          | 主要功能 | 地址（点击访问）                                     | 使用许可证                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------- | ------------------------------------- |
+| Coze-Studio 是面向智能体、应用与工作流编排的 AI 开发平台，覆盖模板化构建与 RAG 等常见能力。                                                                       | AI工作流 | [coze](https://github.com/coze-dev/coze-studio)      | [Apache 2.0](#Protocol-document-link) |
+| ComfyUI 是面向生成式 AI 的低代码节点式工作流工具，社区提供大量工作流模板与插件。                                                                                  | AI工作流 | [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | [GPL 3.0](#Protocol-document-link)    |
+
+## AI工具
+
+### 图像生成
 
 | 项目简要                                                                                                                                      | 主要功能 | 地址（点击访问）                                                                  | 使用许可证                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------- | ----------------------------------- |
-| Stable-diffusion-webui可以一键构建AI画图的web页面，让AI画图变得简单，使用插件也具备视频生成功能，目前生态已经非常丰富，社区存在大量优秀插件。 | 图像生成 | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | [AGPL 3.0](#Protocol-document-link) |
-| 一个经典的脸部替换项目，请注意法律风险。                                                                                                      | 图像处理 | [DeepFaceLive](https://github.com/iperov/DeepFaceLive)                            | [GPL 3.0](#Protocol-document-link)  |
+| Stable Diffusion WebUI 是成熟的图像生成 Web 界面项目，插件生态丰富，并支持扩展到视频等相关工作流。 | 图像生成 | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | [AGPL 3.0](#Protocol-document-link) |
 
-#### 音频处理
+### 音频处理
+
+#### 音频分离与降噪
 
 | 项目简要                                                                   | 主要功能      | 地址（点击访问）                                                                   | 使用许可证                            |
 | -------------------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------- | ------------------------------------- |
-| 比UVR5-UI更强大的音频处理整合项目，作者目前仍在活跃（截止到20250222）。    | 音频分离/降噪 | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)   |
-| 相对于大多数停更的SVC项目，RVC的作者仍在活跃（截止到20250222），开箱即用。 | 音色转化      | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)        |
-| 目前仍在更新的效果最好的文字转语音体系之一，社区活跃（截止到20250309）     | 文字转语音    | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)                               | [MIT](#Protocol-document-link)        |
-| CosyVoice疑似已经被废弃了，Qwen3-TTS是阿里最新开源的TTS解决方案            | 文字转语音    | [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)                                   | [Apache 2.0](#Protocol-document-link) |
+| 音频处理整合项目，覆盖分离、降噪等常见能力。                               | 音频分离/降噪 | [MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI)                          | [AGPL 3.0](#Protocol-document-link)   |
 
-#### 其它
+#### 音色转换
+
+| 项目简要                                     | 主要功能 | 地址（点击访问）                                                                   | 使用许可证                            |
+| -------------------------------------------- | -------- | ---------------------------------------------------------------------------------- | ------------------------------------- |
+| 开源音色转换项目，社区认知度较高。           | 音色转化 | [RVC-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | [MIT](#Protocol-document-link)        |
+
+#### 文字转语音
+
+| 项目简要                                   | 主要功能   | 地址（点击访问）                                     | 使用许可证                            |
+| ------------------------------------------ | ---------- | ---------------------------------------------------- | ------------------------------------- |
+| 开源文字转语音项目，兼顾效果与生态。       | 文字转语音 | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) | [MIT](#Protocol-document-link)        |
+| 阿里开源的文字转语音方案。                 | 文字转语音 | [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)     | [Apache 2.0](#Protocol-document-link) |
+
+### 编码代理
+
+| 项目简要                                                                                                                                      | 主要功能 | 地址（点击访问）                                    | 使用许可证                            |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------- | ------------------------------------- |
+| Aider 是终端中的 AI 结对编程工具，支持基于现有代码库进行修改，覆盖多种主流模型，并集成 Git、测试与代码库映射能力。                           | AI编码代理 | [aider](https://github.com/Aider-AI/aider)          | [Apache 2.0](#Protocol-document-link) |
+| OpenCode 是开源 AI 编码代理，强调终端体验与客户端/服务端架构，适合在本地环境中进行交互式编码、执行与远程驱动。                                | AI编码代理 | [opencode](https://github.com/anomalyco/opencode)   | [MIT](#Protocol-document-link)        |
+
+### 其它
 
 | 项目简要                                                                                                  | 主要功能  | 地址（点击访问）                                                           | 使用许可证                            |
 | --------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------- | ------------------------------------- |
-| 基于langchain的大语言模型llm项目，支持RAG和Agent相关功能（Langchain-ChatGLM的改进项目）。                 | 类ChatGPT | [Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) | [Apache 2.0](#Protocol-document-link) |
-| 一个开箱即用的仿ChatGPT项目（基于API的），功能支持较多，如果你想快速落地一个类ChatGPT项目，或许这是首选。 | 类ChatGPT | [open-webui](https://github.com/open-webui/open-webui)                     | [MIT](#Protocol-document-link)        |
+| 类 ChatGPT Web 应用项目，适合基于 API 快速搭建通用对话界面。 | 类ChatGPT | [open-webui](https://github.com/open-webui/open-webui)                     | [MIT](#Protocol-document-link)        |
+
+# 基础设施
 
 ## 权限控制
 
 | 项目简要                                                                                                                                | 类型     | 地址（点击访问）                              | 使用许可证                            |
 | --------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------- | ------------------------------------- |
-| casbin 是一个强大而高效的开源访问控制库，可以支持RBAC，ABAC，当然我们认为复杂的权限管理和绕口的专业名词，以及低代码可能并不适合所有人。 | 权限管理 | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#Protocol-document-link) |
-| 和casbin同出一家的身份验证项目（IAM/SSO）。                                                                                             | 身份验证 | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#Protocol-document-link) |
+| Casbin 是开源访问控制库，支持 RBAC、ABAC 等常见访问控制模型。 | 权限管理 | [casbin](https://github.com/casbin/casbin)    | [Apache 2.0](#Protocol-document-link) |
+| Casdoor 是同一生态中的身份验证项目（IAM/SSO）。                                                                                         | 身份验证 | [casdoor](https://github.com/casdoor/casdoor) | [Apache 2.0](#Protocol-document-link) |
 
 ## 网络控制
 
 | 项目简要                                             | 类型     | 地址（点击访问）                       | 使用许可证                         |
 | ---------------------------------------------------- | -------- | -------------------------------------- | ---------------------------------- |
-| nps可以搭建起一个内网穿透代理，并拥有web界面的后台。 | 内网穿透 | [nps](https://github.com/ehang-io/nps) | [GPL 3.0](#Protocol-document-link) |
+| NPS 可以搭建内网穿透代理，并提供 Web 管理界面。 | 内网穿透 | [nps](https://github.com/ehang-io/nps) | [GPL 3.0](#Protocol-document-link) |
 
-## 消息中间件
+## 数据存储与缓存
 
 | 项目简要                                                                                                                                | 地址（点击访问）                                    | 类型       | 使用许可证                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ---------- | ------------------------------------------ |
 | TIDB金融级分布式数据库，兼容MysqlAPI，同时支持OLAP和OLTP。相较于OceanBase，TIDB的开源氛围更好。                                         | [tidb](https://github.com/pingcap/tidb)             | New-SQL-DB | [Apache 2.0](#Protocol-document-link)      |
 | OceanBase Database 是一个分布式关系型数据库。完全由蚂蚁集团自主研发。 OceanBase 基于 Paxos 协议以及分布式架构，实现了高可用和线性扩展。 | [oceanbase](https://github.com/oceanbase/oceanbase) | New-SQL-DB | [Mulan PubL v2](#Protocol-document-link)   |
-| qdrant是一个rust编写的向量数据库，具备分布式生产能力                                                                                    | [qdrant](https://github.com/qdrant/qdrant)          | Vector-DB  | [Apache 2.0](#Protocol-document-link)      |
-| milvus是一个go和c++编写的向量数据库，具备分布式生产能力                                                                                 | [milvus](https://github.com/milvus-io/milvus)       | Vector-DB  | [Apache 2.0](#Protocol-document-link)      |
-| 共享KV内存缓存项目，至今我没有发现redis的替代品                                                                                         | [redis](https://github.com/redis/redis)             | KV-Cache   | [独立协议](https://github.com/redis/redis) |
+| Qdrant 是一个 Rust 编写的向量数据库，具备分布式生产能力。                                                                               | [qdrant](https://github.com/qdrant/qdrant)          | Vector-DB  | [Apache 2.0](#Protocol-document-link)      |
+| Milvus 是一个由 Go 和 C++ 编写的向量数据库，具备分布式生产能力。                                                                        | [milvus](https://github.com/milvus-io/milvus)       | Vector-DB  | [Apache 2.0](#Protocol-document-link)      |
+| 高性能内存 KV 数据库与缓存系统，广泛用于缓存、消息与数据结构场景。                                                                     | [redis](https://github.com/redis/redis)             | KV-Cache   | [独立协议](https://github.com/redis/redis) |
 
-## OPS
-
-## CI/CD
+## 交付与镜像构建
 
 ### CD
 
 | 项目简要                                                                                                                                                                                                                                              | 地址（点击访问）                                | 使用许可证                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------- |
-| K8S是一个标准的流程编排CD系统，已经被一些人誉为分布式操作系统。其实就是一个CD系统（我指的K8S核心功能，而非K8S/云原生生态），我不明白为什么有这么高的评价。现代中大型企业的业务应用基本都被K8S管控，目前K8S生态已经开始向有状态应用和GPU应用管控发展。 | [k8s](https://github.com/kubernetes/kubernetes) | [Apache 2.0](#Protocol-document-link) |
+| Kubernetes 是主流容器编排与集群管理平台，提供声明式部署、服务发现、扩缩容、自愈和滚动更新等能力。                                                          | [k8s](https://github.com/kubernetes/kubernetes) | [Apache 2.0](#Protocol-document-link) |
 
 ### 容器能力
 
 | 项目简要                                                                                                                | 地址（点击访问）                                       | 使用许可证                            |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------- |
-| 一个容器运行时工具，负责启动、停止、暂停、删除容器，通常和k8s类项目组合部署，一般不用做单节点或个人使用，无法构建镜像。 | [containerd](https://github.com/containerd/containerd) | [Apache 2.0](#Protocol-document-link) |
-| Kaniko不再维护，你总是要构建镜像，选一个合适的工具                                                                      | [buildkit](https://github.com/moby/buildkit)           | [Apache 2.0](#Protocol-document-link) |
-
-# AI模型
-
-## 生成式AI模型
-
-### 扩散模型
-
-#### 图片生成
-
-| 项目简要                                                                                                                                                          | 地址（点击访问）                                                                                | 使用许可证                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| stable diffusion v1-5 是CompVis原始版本的改进版本，目前仍是工具链最完善的图像底座模型没有之一。（截止到20250222）                                                 | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
-| stable-diffusion-xl-base-1.0 由stabilityai开发的sd高清版本，虽然出现了一些比较新的技术，但关于相关工具链，例如controlnet等的完善程度仅次于sd1.5（截止到20250222） | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
-
-#### 视频生成
-
-| 项目简要                                                                                                           | 地址（点击访问）                          | 使用许可证                            |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ------------------------------------- |
-| 阿里系开源的视频生成模型，有众多版本，开源模型中表现良好。使用协议从github页面上看是apche2.0，但模型页面没有标注。 | [Wan-Video](https://github.com/Wan-Video) | [Apache 2.0](#Protocol-document-link) |
-
-## 大语言模型&多模态理解模型&自回归多模态模型
-
-多模态模型通常是基于大语言模型的改造版本
-
-| 项目简要                                                                                                                                                              | 多模态                 | 地址（点击访问）                           | 使用许可证                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------------ | ----------------------------------------- |
-| 25年初一鸣惊人的deepseek，目前相较于其它顶级模型在一些场景下已经略显落后，但在一些非标准测试中仍有惊人表现，即将发布全新框架基座模型（2601）                          | 多模态版本处于试验阶段 | [deepseek](https://github.com/deepseek-ai) | [MIT](#Protocol-document-link)            |
-| qwen由阿里发布的大语言模型，包含图片理解，音频理解，数学，代码优化版本。                                                                                              | 有多模态版本           | [QwenLM](https://github.com/QwenLM)        | [多种协议](https://huggingface.co/Qwen)   |  |
-| 原清华团队先改名zai-org并商业化转型的公司，在24，25年的开源LLM中都有不错的表现，多次在常见测试中追平同期SOTA闭源模型                                                  | 有多模态版本           | [GLM](https://huggingface.co/zai-org)      | [MIT](#Protocol-document-link)            |  |
-| 24年在中国表现出色的大模型团队即一段时间的沉寂和先后推出K2-Think K2.5两个非常出色的型号，且都是原生int4量化，相较于其它主流模型总参数占用内存较小，且处于开源第一梯队 | 有多模态版本           | [KIMI](https://github.com/MoonshotAI)      | [独立协议](https://github.com/MoonshotAI) |
+| containerd 是容器运行时，负责镜像拉取、容器生命周期管理与执行，常作为 Kubernetes 节点运行时，也可独立用于本地或单机环境；本身不负责镜像构建。                   | [containerd](https://github.com/containerd/containerd) | [Apache 2.0](#Protocol-document-link) |
+| BuildKit 是现代镜像构建工具链，支持高效缓存、并行构建、多平台构建和无 root 运行；Docker Engine 23.0 起，`docker build` 默认基于 Buildx/BuildKit。               | [buildkit](https://github.com/moby/buildkit)           | [Apache 2.0](#Protocol-document-link) |
 
 # 语言能力
 
@@ -187,45 +209,52 @@
 
 | 项目简要                                                                                           | 地址（点击访问）                           | 使用许可证                            |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------ | ------------------------------------- |
-| GRPC是Google推出的跨语言RPC协议，使用HTTP/2并通过预先定义字段协议从而增加性能。 灵活性不如thrift。 | [grpc](https://github.com/grpc/grpc)       | [Apache 2.0](#Protocol-document-link) |
-| thrift是meta推出的跨语言RPC协议，可以自定义协议，原生不支持流式传输。性能不如GRPC。                | [thrift](https://github.com/apache/thrift) | [Apache 2.0](#Protocol-document-link) |
+| gRPC 是 Google 开源的跨语言 RPC 框架，基于 HTTP/2，支持双向流、超时控制、认证与代码生成，广泛用于服务间通信。 | [grpc](https://github.com/grpc/grpc)       | [Apache 2.0](#Protocol-document-link) |
+| Thrift 最初由 Facebook 开发，现为 Apache 基金会项目，提供 IDL、代码生成以及可替换的传输层与协议层实现。     | [thrift](https://github.com/apache/thrift) | [Apache 2.0](#Protocol-document-link) |
 
 ## Python
 
 ### AI能力
 
-#### AI工具库
+#### LLM应用框架
 
 | 项目简要                                                                                                                              | 地址（点击访问）                                       | 使用许可证                            |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------- |
-| Huggingface开源的Diffusers是用于生成图像、音频甚至分子3D结构的最新预训练扩散模型的首选库。                                            | [diffusers](https://github.com/huggingface/diffusers)  | [Apache 2.0](#Protocol-document-link) |
-| langchain是一个用于开发和管理基于大型语言模型应用程序的框架，它提供标准化接口和工具链，简化了与AI模型的交互、数据处理和应用开发流程。 | [langchain](https://github.com/langchain-ai/langchain) | [MIT](#Protocol-document-link)        |
+| LangChain 是一个用于开发和管理基于大型语言模型应用程序的框架，提供标准化接口和工具链，简化与 AI 模型的交互、数据处理和应用开发流程。 | [langchain](https://github.com/langchain-ai/langchain) | [MIT](#Protocol-document-link)        |
+
+#### 模型训练与推理工具
+
+| 项目简要                                                                                                               | 地址（点击访问）                                      | 使用许可证                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------- |
+| Huggingface 开源的 Diffusers 是扩散模型训练与推理工具库，覆盖图像、音频与 3D 等场景。                             | [diffusers](https://github.com/huggingface/diffusers) | [Apache 2.0](#Protocol-document-link) |
+| Unsloth 是面向开源模型本地训练与推理的工具链，支持微调、强化学习、导出与统一本地界面，强调低显存占用与训练效率。   | [unsloth](https://github.com/unslothai/unsloth)        | [多种协议](https://github.com/unslothai/unsloth) |
 
 #### 算法框架
 
 | 项目简要                                                             | 地址（点击访问）                                       | 使用许可证                                                       |
 | -------------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------- |
-| PyTorch简单易用，初学者首选，目前由Meta牵头维护。                    | [pytorch](https://github.com/pytorch/pytorch)          | [独立协议](https://github.com/pytorch/pytorch/blob/main/LICENSE) |
-| TensorFlow是Google的工程化AI框架解决方案。                           | [tensorflow](https://github.com/tensorflow/tensorflow) | [Apache 2.0](#Protocol-document-link)                            |
-| Google近年来投入了较大精力的AI框架，特点是性能更高，但学习曲线陡峭。 | [jax](https://github.com/jax-ml/jax)                   | [Apache 2.0](#Protocol-document-link)                            |
+| PyTorch 是主流深度学习框架之一，易于上手、生态完整，由 PyTorch Foundation 推动开放治理。 | [pytorch](https://github.com/pytorch/pytorch)          | [独立协议](https://github.com/pytorch/pytorch/blob/main/LICENSE) |
+| TensorFlow 是 Google 推动的工程化机器学习框架，覆盖训练、推理、部署与移动端等场景。               | [tensorflow](https://github.com/tensorflow/tensorflow) | [Apache 2.0](#Protocol-document-link)                            |
+| JAX 是面向加速器的高性能数组计算与程序变换库，强调 JIT 编译、自动微分、向量化与并行化能力。       | [jax](https://github.com/jax-ml/jax)                   | [Apache 2.0](#Protocol-document-link)                            |
 
 ## Golang
 
 ### AI能力
 
-#### AI工具库
+#### LLM应用框架
 
 | 项目简要                                                        | 地址（点击访问）                          | 使用许可证                            |
 | --------------------------------------------------------------- | ----------------------------------------- | ------------------------------------- |
-| eino字节跳动开源的go语言大模型工具链框架，对标产品是langchain。 | [eino](https://github.com/cloudwego/eino) | [Apache 2.0](#Protocol-document-link) |
+| Eino 是字节跳动开源的 Go 语言大模型工具链框架，对标产品是 LangChain。 | [eino](https://github.com/cloudwego/eino) | [Apache 2.0](#Protocol-document-link) |
 
 ### 基础能力
 
 | 项目简要                                     | 地址（点击访问）                                          | 使用许可证                            |
 | -------------------------------------------- | --------------------------------------------------------- | ------------------------------------- |
-| 这是一个GO语言协程池库，我们稳定用于生产。   | [ants](https://github.com/panjf2000/ants)                 | [MIT](#Protocol-document-link)        |
-| go语言map和struct互相解析的库。              | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
-| 开箱即用的内存缓存库，也可以配置最大缓存大小 | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
+| Go 语言协程池库。                            | [ants](https://github.com/panjf2000/ants)                 | [MIT](#Protocol-document-link)        |
+| Go 语言 map 与 struct 相互解析的库。         | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
+| Sonic 是高性能 JSON 库，通过 JIT 与 SIMD 加速，在无需代码生成的前提下提供高效的序列化与反序列化能力。 | [sonic](https://github.com/bytedance/sonic)               | [Apache 2.0](#Protocol-document-link) |
+| 内存缓存库，支持配置最大缓存大小。           | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
 | 内存缓存库，相较于bigcache配置更简单         | [freecache](https://github.com/coocood/freecache)         | [MIT](#Protocol-document-link)        |
 | 无锁且并发安全的Map                          | [haxmap](https://github.com/alphadose/haxmap)             | [MIT](#Protocol-document-link)        |
 
@@ -233,8 +262,7 @@
 
 | 项目简要                                                                                                          | 地址（点击访问）                                  | 使用许可证                            |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------- |
-| 我认为比标准RFC文档UUID更聪明的做法，适用于分布式ID或字符串唯一键，前缀是有序的。                                 | [ksuid](https://github.com/segmentio/ksuid)       | [MIT](#Protocol-document-link)        |
-| ffmpeg-python的Go语言实现，[FFmpeg](https://github.com/FFmpeg/FFmpeg) 是一个C语言开发的知名开源音视频数据处理库。 | [ffmpeg-go](https://github.com/u2takey/ffmpeg-go) | [Apache 2.0](#Protocol-document-link) |
+| ffmpeg-python 的 Go 语言实现。[FFmpeg](https://github.com/FFmpeg/FFmpeg) 是一个 C 语言开发的知名开源音视频数据处理库。 | [ffmpeg-go](https://github.com/u2takey/ffmpeg-go) | [Apache 2.0](#Protocol-document-link) |
 
 ### HTTP
 
@@ -242,7 +270,7 @@
 
 | 项目简要                                                                       | 地址（点击访问）                            | 使用许可证                            |
 | ------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
-| 抖音集团开源的HTTP框架，根据文档中的基准测试，性能和稳定性均超过fasthttp框架。 | [hertz](https://github.com/cloudwego/hertz) | [Apache 2.0](#Protocol-document-link) |
+| Hertz 是字节跳动开源的 Go 微服务 HTTP 框架，强调高性能、高易用性与可扩展性，适合对性能和工程化都有要求的场景。 | [hertz](https://github.com/cloudwego/hertz) | [Apache 2.0](#Protocol-document-link) |
 
 #### Client
 
@@ -256,27 +284,25 @@
 
 | 项目简要                                                                                                                                                   | 地址（点击访问）                            | 使用许可证                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------- |
-| 抖音集团开源的RPC Server框架，使用同为抖音开源的高性能网络库，目前主要支持为Thrift，虽然项目显示支持GRPC，但官方主要支持的协议是Thrift有自研高性能解析库。 | [kitex](https://github.com/cloudwego/kitex) | [Apache 2.0](#Protocol-document-link) |
+| Kitex 是字节跳动开源的 Go RPC 框架，支持 Thrift、Kitex Protobuf 与 gRPC，提供代码生成、治理扩展和流式通信能力。 | [kitex](https://github.com/cloudwego/kitex) | [Apache 2.0](#Protocol-document-link) |
 
-### Server-frame
+### 服务框架
 
 | 项目简要                                                                                                                                               | 地址（点击访问）                              | 使用许可证                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------- | ------------------------------ |
-| 由bilibili主导的go语言开源框架，中规中矩，简单易用，生态完善，如果你擅长使用GRPC生态可以使用该框架快速构建你的mvp，模版项目同时启动http和grpc server。 | [kratos](https://github.com/go-kratos/kratos) | [MIT](#Protocol-document-link) |
+| Kratos 是面向微服务的 Go 框架，默认支持 HTTP 和 gRPC，提供工程化目录、配置、日志、注册发现与中间件等基础能力。 | [kratos](https://github.com/go-kratos/kratos) | [MIT](#Protocol-document-link) |
 
-https://github.com/go-kratos/kratos
-
-### Gui
+### GUI
 
 | 项目简要                                                                                                   | 地址（点击访问）                        | 使用许可证                       |
 | ---------------------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------- |
-| fyne是一个go语言的gui框架，它不仅能制作桌面程序还能打包移动程序。虽然我讨厌CGO，但目前实在没什么好的选择。 | [fyne](https://github.com/fyne-io/fyne) | [BSD 3](#Protocol-document-link) |
+| Fyne 是 Go 语言 GUI 框架，支持桌面与移动端应用开发，提供统一的组件、布局与打包能力。 | [fyne](https://github.com/fyne-io/fyne) | [BSD 3](#Protocol-document-link) |
 
 ### 操作系统接口
 
 | 项目简要                                                                                                                                  | 地址（点击访问）                               | 使用许可证                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | -------------------------------- |
-| gopsutil是一个用于系统监控、分析和限制进程资源以及管理进程得库，它是python项目[psutil](https://github.com/giampaolo/psutil)的go语言实现。 | [gopsutil](https://github.com/shirou/gopsutil) | [BSD 3](#Protocol-document-link) |
+| Gopsutil 是一个用于系统监控、分析和限制进程资源以及管理进程的库，它是 Python 项目 [psutil](https://github.com/giampaolo/psutil) 的 Go 语言实现。 | [gopsutil](https://github.com/shirou/gopsutil) | [BSD 3](#Protocol-document-link) |
 
 # Java
 
@@ -288,14 +314,16 @@ https://github.com/go-kratos/kratos
 | ----------------------------- | ------------------------------------------------------------- | ------------------------------------- |
 | 一个好用的Android权限申请库。 | [XXPermissions](https://github.com/getActivity/XXPermissions) | [Apache 2.0](#Protocol-document-link) |
 
-# Font
+# 字体
 
 | 项目简要     | 语种   | 可商用         | 地址                                        | 使用许可证                                          |
 | ------------ | ------ | -------------- | ------------------------------------------- | --------------------------------------------------- |
-| 谷歌免费字体 | 多语种 | 多数情况下可以 | [fonts.google.com](fonts.google.com)        | [多种协议](https://developers.google.com/fonts/faq) |
-| 阿里免费字体 | 中文   | 多数情况下可以 | [www.alibabafonts.co](www.alibabafonts.com) | [独立协议](https://www.alibabafonts.com/#/more)     |
+| 谷歌免费字体 | 多语种 | 多数情况下可以 | [fonts.google.com](https://fonts.google.com)        | [多种协议](https://developers.google.com/fonts/faq) |
+| 阿里免费字体 | 中文   | 多数情况下可以 | [www.alibabafonts.co](https://www.alibabafonts.com) | [独立协议](https://www.alibabafonts.com/#/more)     |
 
-# Protocol document link
+<a id="Protocol-document-link"></a>
+
+# 许可证原文链接
 
 | 许可证                   | 原文链接                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------ |

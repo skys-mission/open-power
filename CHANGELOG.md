@@ -1,5 +1,16 @@
 # Changelog
 
+## 20260405
+
+1. Reorganized the AI section structure
+2. Added the AI protocols and standards section with Model Context Protocol (MCP)
+3. Added coding agent projects including aider and opencode
+4. Added Qwen-Image, HunyuanImage-3.0, Unsloth, and Sonic
+5. Split Python AI capabilities into LLM application frameworks and model training/inference tools
+6. Split audio processing into separation/noise reduction, voice conversion, and text-to-speech
+7. Updated infrastructure and language capability sections
+8. Refreshed README layout and bilingual content
+
 ## 20251127
 
 1. Re-add GLM
