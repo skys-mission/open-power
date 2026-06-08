@@ -2,3 +2,7 @@
 .vscode
 
 *.exe
+
+.claude
+CLAUDE.md
+AGENTS.md

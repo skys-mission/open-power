@@ -12,6 +12,8 @@ Other languages: [简体中文](README_zh.md)
 
 Covering open-source projects, protocols, and toolchains for research, comparison, and technology selection.
 
+This project uses AI tools to assist with documentation editing. All project selections and curation are performed 100% manually.
+
 # Table of Contents
 
 <!-- TOC -->
@@ -25,7 +27,7 @@ Covering open-source projects, protocols, and toolchains for research, compariso
         * [Image Generation](#image-generation)
         * [Video Generation](#video-generation)
   * [AI Protocols and Standards](#ai-protocols-and-standards)
-    * [Model Context Protocol](#model-context-protocol)
+    * [Protocols](#protocols)
   * [AI Workflows](#ai-workflows)
   * [AI Tools](#ai-tools)
     * [Image Generation](#image-generation-1)
@@ -84,6 +86,7 @@ Multimodal models are usually extended from large language models.
 | Qwen is Alibaba's open-source model family, covering text, image understanding, audio, math, and code.  | Multimodal versions available | [QwenLM](https://github.com/QwenLM)        | Depends on the model |
 | GLM is an open-source model family from zai-org, covering general-purpose, multimodal, and agent use.   | Multimodal versions available | [GLM](https://huggingface.co/zai-org)      | Depends on the model |
 | Kimi is an open-source model family from Moonshot AI, covering general and reasoning-oriented models.    | Multimodal versions available | [KIMI](https://github.com/MoonshotAI)      | Depends on the model |
+| Gemma is an open-weights large language model family by Google DeepMind, based on Gemini research and technology, with a JAX library for inference and fine-tuning. | Multimodal versions available | [gemma](https://github.com/google-deepmind/gemma) | [Apache 2.0](#protocol-document-links) |
 
 ### Generative AI Models
 
@@ -95,28 +98,30 @@ Multimodal models are usually extended from large language models.
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------- |
 | Stable Diffusion v1-5 is an image generation base model compatible with WebUI, ComfyUI, LoRA, and ControlNet workflows.           | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#protocol-document-links)   |
 | Stable Diffusion XL Base 1.0 is a high-resolution image generation base model compatible with common SDXL tooling and workflows.   | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#protocol-document-links) |
-| Qwen-Image is a 20B MMDiT image model covering both generation and editing, supporting Chinese text rendering and layout control.  | [Qwen-Image](https://github.com/QwenLM/Qwen-Image)                                               | [Apache 2.0](#protocol-document-links)               |
 | HunyuanImage-3.0 is a native multimodal autoregressive image generation model requiring substantial compute resources.             | [HunyuanImage-3.0](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0)                         | [Proprietary License](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/blob/main/LICENSE) |
+| HiDream-I1 is a 17B-parameter text-to-image foundation model using Sparse DiT architecture, supporting bilingual prompts, with Full / Dev / Fast variants. | [HiDream-I1](https://github.com/HiDream-ai/HiDream-I1)                                          | [MIT](#protocol-document-links)                      |
 
 ##### Video Generation
 
 | Project Summary                                                        | Link (Click to Visit)               | License                              |
 | ---------------------------------------------------------------------- | ----------------------------------- | ------------------------------------ |
 | Alibaba's open-source video generation model family, available in multiple variants. | [Wan-Video](https://github.com/Wan-Video) | [Apache 2.0](#protocol-document-links) |
+| LTX-Video is a DiT-based video generation model supporting image-to-video, multi-keyframe conditioning, video extension, and video-to-video transformations, with up to 4K resolution at 50 FPS. | [LTX-Video](https://github.com/Lightricks/ltx-video) | [Apache 2.0](#protocol-document-links) |
 
 ## AI Protocols and Standards
 
-### Model Context Protocol
+### Protocols
 
 | Project Summary                                                                                                                                                | Type                | Link (Click to Visit)                                           | License                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------- | ------------------------------------ |
 | Model Context Protocol (MCP) is an open protocol for integrating LLM applications with external data sources and tools, defining a unified context exchange and client/server interaction model. | AI Protocol Standard | [MCP](https://github.com/modelcontextprotocol/modelcontextprotocol) | [MIT](#protocol-document-links)      |
+| Agent2Agent (A2A) is an open protocol enabling communication and interoperability between opaque agentic applications, allowing agents to discover capabilities and collaborate on long-running tasks. | AI Protocol Standard | [A2A](https://github.com/a2aproject/A2A) | [Apache 2.0](#protocol-document-links) |
+| Agent Client Protocol (ACP) standardizes communication between code editors and coding agents, providing SDKs in Kotlin, Java, Python, Rust, and TypeScript. | AI Protocol Standard | [ACP](https://github.com/agentclientprotocol/agent-client-protocol) | [Apache 2.0](#protocol-document-links) |
 
 ## AI Workflows
 
 | Project Summary                                                                                                                          | Main Features | Link (Click to Visit)                             | License                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------- | ------------------------------------ |
-| Coze-Studio is an AI development platform for agents, applications, and workflow orchestration, covering template-based construction and common RAG capabilities. | AI Workflow   | [coze](https://github.com/coze-dev/coze-studio)   | [Apache 2.0](#protocol-document-links) |
 | ComfyUI is a low-code node-based workflow tool for generative AI, supporting community workflows and plugins.                            | AI Workflow   | [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | [GPL 3.0](#protocol-document-links)  |
 
 ## AI Tools
@@ -146,13 +151,13 @@ Multimodal models are usually extended from large language models.
 | Project Summary                                          | Main Features  | Link (Click to Visit)                                     | License                              |
 | -------------------------------------------------------- | -------------- | --------------------------------------------------------- | ------------------------------------ |
 | An open-source project for text-to-speech generation.                          | Text-to-Speech | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)      | [MIT](#protocol-document-links)      |
-| Alibaba's open-source text-to-speech solution.           | Text-to-Speech | [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)          | [Apache 2.0](#protocol-document-links) |
+| Voxtral-4B-TTS is Mistral's open-weight multilingual text-to-speech model supporting 9 languages and zero-shot voice cloning from 3 seconds of reference audio, with ~70 ms latency. | Text-to-Speech | [Voxtral-4B-TTS](https://huggingface.co/mistralai/Voxtral-4B-TTS-2603) | [CC BY-NC 4.0](#protocol-document-links) |
+| Fish Speech (Fish Audio S2 Pro) is a multilingual text-to-speech system with Dual-AR architecture and RL alignment, supporting natural language prosody control and multi-speaker generation across 80+ languages. | Text-to-Speech | [fish-speech](https://github.com/fishaudio/fish-speech) | [FISH AUDIO RESEARCH LICENSE](https://github.com/fishaudio/fish-speech/blob/main/LICENSE) |
 
 ### Coding Agents
 
 | Project Summary                                                                                                                   | Main Features  | Link (Click to Visit)                          | License                              |
 | --------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------------------------------------------- | ------------------------------------ |
-| Aider is an AI pair programming tool for the terminal, supporting codebase-aware edits with Git, testing, and repository mapping. | AI Coding Agent | [aider](https://github.com/Aider-AI/aider)    | [Apache 2.0](#protocol-document-links) |
 | OpenCode is an open-source AI coding agent focused on terminal workflows and client/server architecture for local and remote execution. | AI Coding Agent | [opencode](https://github.com/anomalyco/opencode) | [MIT](#protocol-document-links)      |
 
 ### Others
@@ -335,4 +340,6 @@ Multimodal models are usually extended from large language models.
 | CreativeML Open RAIL-M   | https://github.com/CompVis/stable-diffusion/blob/main/LICENSE                        |
 | CreativeML Open RAIL++-M | https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md |
 | OFL1.1 2007              | https://openfontlicense.org/documents/OFL.txt                                        |
-| Mulan PubL v2            | http://license.coscl.org.cn/MulanPubL-2.0                                            |
+| Mulan PubL v2            | https://license.coscl.org.cn/MulanPubL-2.0                                            |
+| CC BY-NC 4.0             | https://creativecommons.org/licenses/by-nc/4.0/                                      |
+| FISH AUDIO RESEARCH LICENSE | https://github.com/fishaudio/fish-speech/blob/main/LICENSE                        |
