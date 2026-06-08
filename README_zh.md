@@ -12,6 +12,8 @@
 
 覆盖常用开源项目、协议与工具链，便于快速调研、对比与选型。
 
+本项目使用 AI 工具辅助编辑文档，但所有项目筛选与收录均为 100% 人工完成。
+
 # 目录
 
 <!-- TOC -->
@@ -25,7 +27,7 @@
         * [图片生成](#图片生成)
         * [视频生成](#视频生成)
   * [AI协议与标准](#ai协议与标准)
-    * [模型上下文协议](#模型上下文协议)
+    * [协议](#协议)
   * [AI工作流](#ai工作流)
   * [AI工具](#ai工具)
     * [图像生成](#图像生成)
@@ -84,6 +86,7 @@
 | Qwen 是阿里开源的大模型系列，覆盖文本、图像理解、音频、数学与代码等多类能力。                                                                                      | 有多模态版本           | [QwenLM](https://github.com/QwenLM)        | 按具体模型而定 |
 | GLM 是 zai-org 推出的开源大模型系列，覆盖通用、多模态与智能体相关能力。                                                                                             | 有多模态版本           | [GLM](https://huggingface.co/zai-org)      | 按具体模型而定 |
 | Kimi 是 Moonshot AI 推出的开源模型系列，覆盖通用与推理能力方向。                                                                                                  | 有多模态版本           | [KIMI](https://github.com/MoonshotAI)      | 按具体模型而定 |
+| Gemma 是 Google DeepMind 推出的开放权重大语言模型系列，基于 Gemini 研究和技术，提供用于推理与微调的 JAX 库。 | 有多模态版本           | [gemma](https://github.com/google-deepmind/gemma) | [Apache 2.0](#Protocol-document-link) |
 
 ### 生成式AI模型
 
@@ -95,28 +98,30 @@
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | stable diffusion v1-5 是经典图像生成基座，具备成熟的 WebUI / ComfyUI / LoRA / ControlNet 生态支持。                                                              | [stable-diffusion v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)     | [CreativeML Open RAIL-M](#Protocol-document-link)   |
 | stable-diffusion-xl-base-1.0 是经典高清图像生成基座，在画质、分辨率与社区支持之间保持较好平衡。                                                                  | [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | [CreativeML Open RAIL++-M](#Protocol-document-link) |
-| Qwen-Image 是 20B MMDiT 图像基座，兼顾生成与编辑，在中文文字渲染与排版控制方面表现突出。                                                                          | [Qwen-Image](https://github.com/QwenLM/Qwen-Image)                                               | [Apache 2.0](#Protocol-document-link)               |
 | HunyuanImage-3.0 是原生多模态自回归图像生成模型，技术路线较新，部署资源需求较高。                                                                                 | [HunyuanImage-3.0](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0)                         | [独立协议](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/blob/main/LICENSE) |
+| HiDream-I1 是 17B 参数文生图基座模型，基于 Sparse DiT 架构，支持中英双语提示，提供 Full / Dev / Fast 多版本。                                                     | [HiDream-I1](https://github.com/HiDream-ai/HiDream-I1)                                          | [MIT](#Protocol-document-link)                       |
 
 ##### 视频生成
 
 | 项目简要                                                                                                           | 地址（点击访问）                          | 使用许可证                            |
 | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ------------------------------------- |
 | 阿里开源的视频生成模型系列，提供多个版本。 | [Wan-Video](https://github.com/Wan-Video) | [Apache 2.0](#Protocol-document-link) |
+| LTX-Video 是基于 DiT 架构的视频生成模型，支持图生视频、多关键帧、视频扩展与视频到视频转换，最高可达 4K 分辨率 50 FPS。 | [LTX-Video](https://github.com/Lightricks/ltx-video) | [Apache 2.0](#Protocol-document-link) |
 
 ## AI协议与标准
 
-### 模型上下文协议
+### 协议
 
 | 项目简要                                                                                                                                           | 类型       | 地址（点击访问）                                                     | 使用许可证                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------- | ------------------------------------- |
 | Model Context Protocol（MCP）是面向 LLM 应用与外部数据源、工具集成的开放协议，定义统一的上下文交换与客户端/服务端交互方式，并形成了规范、SDK 与服务端生态。 | AI协议标准 | [MCP](https://github.com/modelcontextprotocol/modelcontextprotocol) | [MIT](#Protocol-document-link)        |
+| Agent2Agent（A2A）是面向智能体应用的开放通信协议，支持不同框架与厂商构建的 Agent 相互发现能力、协商交互方式并协作完成长期任务。 | AI协议标准 | [A2A](https://github.com/a2aproject/A2A) | [Apache 2.0](#Protocol-document-link) |
+| Agent Client Protocol（ACP）是标准化代码编辑器与编码 Agent 之间通信的协议，提供 Kotlin、Java、Python、Rust、TypeScript 多语言 SDK。 | AI协议标准 | [ACP](https://github.com/agentclientprotocol/agent-client-protocol) | [Apache 2.0](#Protocol-document-link) |
 
 ## AI工作流
 
 | 项目简要                                                                                                                                                          | 主要功能 | 地址（点击访问）                                     | 使用许可证                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------- | ------------------------------------- |
-| Coze-Studio 是面向智能体、应用与工作流编排的 AI 开发平台，覆盖模板化构建与 RAG 等常见能力。                                                                       | AI工作流 | [coze](https://github.com/coze-dev/coze-studio)      | [Apache 2.0](#Protocol-document-link) |
 | ComfyUI 是面向生成式 AI 的低代码节点式工作流工具，社区提供大量工作流模板与插件。                                                                                  | AI工作流 | [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | [GPL 3.0](#Protocol-document-link)    |
 
 ## AI工具
@@ -146,13 +151,13 @@
 | 项目简要                                   | 主要功能   | 地址（点击访问）                                     | 使用许可证                            |
 | ------------------------------------------ | ---------- | ---------------------------------------------------- | ------------------------------------- |
 | 开源文字转语音项目，兼顾效果与生态。       | 文字转语音 | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) | [MIT](#Protocol-document-link)        |
-| 阿里开源的文字转语音方案。                 | 文字转语音 | [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)     | [Apache 2.0](#Protocol-document-link) |
+| Voxtral-4B-TTS 是 Mistral 开源的多语言文字转语音模型，支持 9 种语言与 3 秒参考音频的零样本语音克隆，延迟约 70ms。 | 文字转语音 | [Voxtral-4B-TTS](https://huggingface.co/mistralai/Voxtral-4B-TTS-2603) | [CC BY-NC 4.0](#Protocol-document-link) |
+| Fish Speech（Fish Audio S2 Pro）是基于 Dual-AR 架构与 RL 对齐的多语言文字转语音系统，支持自然语言语调控制与 80 余种语言的多说话人生成。 | 文字转语音 | [fish-speech](https://github.com/fishaudio/fish-speech) | [FISH AUDIO RESEARCH LICENSE](https://github.com/fishaudio/fish-speech/blob/main/LICENSE) |
 
 ### 编码代理
 
 | 项目简要                                                                                                                                      | 主要功能 | 地址（点击访问）                                    | 使用许可证                            |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------- | ------------------------------------- |
-| Aider 是终端中的 AI 结对编程工具，支持基于现有代码库进行修改，覆盖多种主流模型，并集成 Git、测试与代码库映射能力。                           | AI编码代理 | [aider](https://github.com/Aider-AI/aider)          | [Apache 2.0](#Protocol-document-link) |
 | OpenCode 是开源 AI 编码代理，强调终端体验与客户端/服务端架构，适合在本地环境中进行交互式编码、执行与远程驱动。                                | AI编码代理 | [opencode](https://github.com/anomalyco/opencode)   | [MIT](#Protocol-document-link)        |
 
 ### 其它
@@ -180,7 +185,7 @@
 
 | 项目简要                                                                                                                                | 地址（点击访问）                                    | 类型       | 使用许可证                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ---------- | ------------------------------------------ |
-| TIDB金融级分布式数据库，兼容MysqlAPI，同时支持OLAP和OLTP。相较于OceanBase，TIDB的开源氛围更好。                                         | [tidb](https://github.com/pingcap/tidb)             | New-SQL-DB | [Apache 2.0](#Protocol-document-link)      |
+| TiDB 是金融级分布式数据库，兼容 MySQL API，同时支持 OLAP 与 OLTP。                                                                         | [tidb](https://github.com/pingcap/tidb)             | New-SQL-DB | [Apache 2.0](#Protocol-document-link)      |
 | OceanBase Database 是一个分布式关系型数据库。完全由蚂蚁集团自主研发。 OceanBase 基于 Paxos 协议以及分布式架构，实现了高可用和线性扩展。 | [oceanbase](https://github.com/oceanbase/oceanbase) | New-SQL-DB | [Mulan PubL v2](#Protocol-document-link)   |
 | Qdrant 是一个 Rust 编写的向量数据库，具备分布式生产能力。                                                                               | [qdrant](https://github.com/qdrant/qdrant)          | Vector-DB  | [Apache 2.0](#Protocol-document-link)      |
 | Milvus 是一个由 Go 和 C++ 编写的向量数据库，具备分布式生产能力。                                                                        | [milvus](https://github.com/milvus-io/milvus)       | Vector-DB  | [Apache 2.0](#Protocol-document-link)      |
@@ -255,7 +260,7 @@
 | Go 语言 map 与 struct 相互解析的库。         | [mapstructure](https://github.com/mitchellh/mapstructure) | [MIT](#Protocol-document-link)        |
 | Sonic 是高性能 JSON 库，通过 JIT 与 SIMD 加速，在无需代码生成的前提下提供高效的序列化与反序列化能力。 | [sonic](https://github.com/bytedance/sonic)               | [Apache 2.0](#Protocol-document-link) |
 | 内存缓存库，支持配置最大缓存大小。           | [bigcache](https://github.com/allegro/bigcache)           | [Apache 2.0](#Protocol-document-link) |
-| 内存缓存库，相较于bigcache配置更简单         | [freecache](https://github.com/coocood/freecache)         | [MIT](#Protocol-document-link)        |
+| 内存缓存库，相较于 bigcache 配置更简单。     | [freecache](https://github.com/coocood/freecache)         | [MIT](#Protocol-document-link)        |
 | 无锁且并发安全的Map                          | [haxmap](https://github.com/alphadose/haxmap)             | [MIT](#Protocol-document-link)        |
 
 ### 工具库
@@ -329,10 +334,12 @@
 | ------------------------ | ------------------------------------------------------------------------------------ |
 | MIT                      | https://opensource.org/license/mit                                                   |
 | AGPL 3.0                 | https://www.gnu.org/licenses/agpl-3.0.txt                                            |
-| GPL  3.0                 | https://www.gnu.org/licenses/gpl-3.0.txt                                             |
+| GPL 3.0                  | https://www.gnu.org/licenses/gpl-3.0.txt                                             |
 | Apache 2.0               | https://www.apache.org/licenses/LICENSE-2.0.txt                                      |
 | BSD 3                    | https://opensource.org/license/bsd-3-clause                                          |
 | CreativeML Open RAIL-M   | https://github.com/CompVis/stable-diffusion/blob/main/LICENSE                        |
 | CreativeML Open RAIL++-M | https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md |
 | OFL1.1 2007              | https://openfontlicense.org/documents/OFL.txt                                        |
-| Mulan PubL v2            | http://license.coscl.org.cn/MulanPubL-2.0                                            |
+| Mulan PubL v2            | https://license.coscl.org.cn/MulanPubL-2.0                                            |
+| CC BY-NC 4.0             | https://creativecommons.org/licenses/by-nc/4.0/                                      |
+| FISH AUDIO RESEARCH LICENSE | https://github.com/fishaudio/fish-speech/blob/main/LICENSE                        |
