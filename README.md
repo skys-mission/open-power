@@ -164,6 +164,7 @@ Multimodal models are usually extended from large language models.
 
 | Project Summary                                                                               | Main Features | Link (Click to Visit)                                  | License                              |
 | --------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------ |
+| light-ocr is a fast offline OCR toolkit for Node.js and C++, using PP-OCRv6 and ONNX Runtime with optional CoreML and WebGPU acceleration. | OCR | [light-ocr](https://github.com/arcships/light-ocr) | [Apache 2.0](#protocol-document-links) |
 | A ChatGPT-like web application for building a general-purpose chat UI on top of APIs.                | ChatGPT-like  | [open-webui](https://github.com/open-webui/open-webui) | [MIT](#protocol-document-links)      |
 
 # Infrastructure

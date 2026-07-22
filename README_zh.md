@@ -164,6 +164,7 @@
 
 | 项目简要                                                                                                  | 主要功能  | 地址（点击访问）                                                           | 使用许可证                            |
 | --------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------- | ------------------------------------- |
+| light-ocr 是面向 Node.js 与 C++ 的快速离线 OCR 工具包，基于 PP-OCRv6 与 ONNX Runtime，并可选使用 CoreML 和 WebGPU 加速。 | OCR | [light-ocr](https://github.com/arcships/light-ocr) | [Apache 2.0](#Protocol-document-link) |
 | 类 ChatGPT Web 应用项目，适合基于 API 快速搭建通用对话界面。 | 类ChatGPT | [open-webui](https://github.com/open-webui/open-webui)                     | [MIT](#Protocol-document-link)        |
 
 # 基础设施

@@ -1,5 +1,9 @@
 # Changelog
 
+## 20260722
+
+1. Added light-ocr to AI tools in both English and Chinese READMEs
+
 ## 20260608
 
 1. Removed Qwen-Image from image generation section
