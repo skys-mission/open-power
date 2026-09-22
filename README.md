@@ -157,6 +157,7 @@ Multimodal models are usually extended from large language models.
 | --------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------------------------------------------- | ------------------------------------ |
 | Pi is an AI agent toolkit and coding-agent harness; its TypeScript monorepo splits a unified multi-provider LLM API, agent runtime, differential-rendering TUI, and coding agent CLI into separate packages. | AI Coding Agent | [pi](https://github.com/earendil-works/pi) | [MIT](#protocol-document-links) |
 | DeepSeek's open-source agent harness (CLI: dsh) built on an everything-is-a-plugin architecture, with a built-in web UI and a plugin ecosystem tracked via the dsh-plugin topic. | AI Coding Agent | [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | [MIT](#protocol-document-links) |
+| YYLO is a command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository changes. It is for developers who want a quick agent loop and for project operators who need typed task, validation, merge, and release-readiness boundaries. | AI Coding Agent | [yylo](https://github.com/yylo-dev/yylo) | [MIT](#protocol-document-links) |
 
 ### OCR
 

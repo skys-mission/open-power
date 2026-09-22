@@ -157,6 +157,7 @@
 | --------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------- | ------------------------------------- |
 | Pi 是 AI 代理工具集与编码代理 harness，TypeScript monorepo 将统一多提供商 LLM API、代理运行时、差分渲染 TUI 与编码代理 CLI 拆分为独立包。 | AI编码代理 | [pi](https://github.com/earendil-works/pi) | [MIT](#Protocol-document-link) |
 | DeepSeek 开源的代理 harness（CLI 为 dsh），采用一切皆插件的架构，内置 Web UI，插件生态经 dsh-plugin 主题聚合。 | AI编码代理 | [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | [MIT](#Protocol-document-link) |
+| YYLO 是面向编码代理的命令行编排器，支持可重复工作流与带回执的仓库变更，为开发者提供快速代理循环，并为项目运维者提供带类型的任务、验证、合并与发布就绪边界。 | AI编码代理 | [yylo](https://github.com/yylo-dev/yylo) | [MIT](#Protocol-document-link) |
 
 ### OCR
 

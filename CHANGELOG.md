@@ -1,5 +1,9 @@
 # Changelog
 
+## 20260922
+
+1. Added yylo to coding agents section in both English and Chinese READMEs
+
 ## 20260921
 
 1. Removed HunyuanImage-3.0 from image generation section
