@@ -189,6 +189,7 @@ Multimodal models are usually extended from large language models.
 | Milvus is a vector database written in Go and C++ for distributed deployments.                                                                  | [milvus](https://github.com/milvus-io/milvus)       | Vector-DB  | [Apache 2.0](#protocol-document-links)                |
 | An open-source column-oriented DBMS for real-time analytics, executing SQL queries over columnar storage with data compression, supporting distributed deployments, primarily implemented in C++. | [clickhouse](https://github.com/ClickHouse/ClickHouse) | OLAP-DB | [Apache 2.0](#protocol-document-links) |
 | An in-memory data structure server forked from Redis 7.2.4 and hosted by the Linux Foundation (LF Projects), compatible with the Redis protocol and API, supporting Lua, Sentinel, Cluster, and the module API. | [valkey](https://github.com/valkey-io/valkey)       | KV-Cache   | [BSD 3](#protocol-document-links)         |
+| Developer-alpha encrypted, append-only knowledge store for humans and agents, with device sync and scoped, expiring MCP access. Implemented in Rust. | [hyperconsciousness](https://github.com/louis030195/hyperconsciousness) | Knowledge store | [MIT](https://github.com/louis030195/hyperconsciousness/blob/main/LICENSE) |
 
 ## Delivery and Image Building
 

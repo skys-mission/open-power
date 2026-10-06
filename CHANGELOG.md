@@ -1,5 +1,9 @@
 # Changelog
 
+## 20261006
+
+1. Added Hyperconsciousness to data storage and caching in both English and Chinese READMEs
+
 ## 20260921
 
 1. Removed HunyuanImage-3.0 from image generation section
