@@ -189,6 +189,7 @@
 | Milvus 是一个由 Go 和 C++ 编写的向量数据库，具备分布式生产能力。                                                                        | [milvus](https://github.com/milvus-io/milvus)       | Vector-DB  | [Apache 2.0](#Protocol-document-link)      |
 | 开源列式实时分析数据库管理系统，以列存储与数据压缩支撑 SQL 查询和实时报表分析，支持分布式部署，主体为 C++ 实现。 | [clickhouse](https://github.com/ClickHouse/ClickHouse) | OLAP-DB | [Apache 2.0](#Protocol-document-link) |
 | 从 Redis 7.2.4 分叉、由 Linux 基金会（LF Projects）托管的内存数据结构服务器，兼容 Redis 协议与 API，支持 Lua、Sentinel、Cluster 与 Module API。 | [valkey](https://github.com/valkey-io/valkey)       | KV-Cache   | [BSD 3](#Protocol-document-link)          |
+| 面向人类与智能体的加密、仅追加知识存储，提供设备同步和限定范围、可过期的 MCP 访问。使用 Rust 实现，处于开发者 alpha 阶段。 | [hyperconsciousness](https://github.com/louis030195/hyperconsciousness) | 知识存储 | [MIT](https://github.com/louis030195/hyperconsciousness/blob/main/LICENSE) |
 
 ## 交付与镜像构建
 
