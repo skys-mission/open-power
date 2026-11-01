@@ -36,6 +36,7 @@
       * [音色转换](#音色转换)
       * [文字转语音](#文字转语音)
     * [编码代理](#编码代理)
+    * [软件测试](#软件测试)
     * [OCR](#ocr)
 * [基础设施](#基础设施)
   * [权限控制](#权限控制)
@@ -157,6 +158,12 @@
 | --------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------- | ------------------------------------- |
 | Pi 是 AI 代理工具集与编码代理 harness，TypeScript monorepo 将统一多提供商 LLM API、代理运行时、差分渲染 TUI 与编码代理 CLI 拆分为独立包。 | AI编码代理 | [pi](https://github.com/earendil-works/pi) | [MIT](#Protocol-document-link) |
 | DeepSeek 开源的代理 harness（CLI 为 dsh），采用一切皆插件的架构，内置 Web UI，插件生态经 dsh-plugin 主题聚合。 | AI编码代理 | [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | [MIT](#Protocol-document-link) |
+
+### 软件测试
+
+| 项目简要 | 主要功能 | 地址（点击访问） | 使用许可证 |
+| -------- | -------- | ---------------- | ---------- |
+| vostride 的 QA 代理支持用自然语言测试 Web、Android 和 iOS 应用，结合 memidex 持久记忆与经过验证的自我改进，提供 CLI/MCP 工作流和可审查的测试证据。CLI 免费，需配置模型；模型服务可能收费。 | 自然语言测试 | [agent-qa](https://vostride.com) | [FSL-1.1-ALv2](#Protocol-document-link) |
 
 ### OCR
 
@@ -345,3 +352,4 @@
 | Qwen Research License    | https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE                       |
 | MiniMax H3 Community License | https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE                  |
 | LGPL 2.1+ / GPL 2.0+   | https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md                                      |
+| FSL-1.1-ALv2 | https://github.com/vostride/agent-qa/blob/main/LICENSE.md |

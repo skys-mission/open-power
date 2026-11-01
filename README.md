@@ -36,6 +36,7 @@ This project uses AI tools to assist with documentation editing. All project sel
       * [Voice Conversion](#voice-conversion)
       * [Text to Speech](#text-to-speech)
     * [Coding Agents](#coding-agents)
+    * [Software Testing](#software-testing)
     * [OCR](#ocr)
 * [Infrastructure](#infrastructure)
   * [Access Control](#access-control)
@@ -157,6 +158,12 @@ Multimodal models are usually extended from large language models.
 | --------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------------------------------------------- | ------------------------------------ |
 | Pi is an AI agent toolkit and coding-agent harness; its TypeScript monorepo splits a unified multi-provider LLM API, agent runtime, differential-rendering TUI, and coding agent CLI into separate packages. | AI Coding Agent | [pi](https://github.com/earendil-works/pi) | [MIT](#protocol-document-links) |
 | DeepSeek's open-source agent harness (CLI: dsh) built on an everything-is-a-plugin architecture, with a built-in web UI and a plugin ecosystem tracked via the dsh-plugin topic. | AI Coding Agent | [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | [MIT](#protocol-document-links) |
+
+### Software Testing
+
+| Project Summary | Main Features | Link (Click to Visit) | License |
+| --------------- | ------------- | -------------------- | ------- |
+| vostride's QA agent tests web, Android and iOS apps in natural language, with memidex persistent memory, validated self-improvement, CLI/MCP workflows and reviewable evidence. Free CLI; configured model providers may charge. | Natural-language QA | [agent-qa](https://vostride.com) | [FSL-1.1-ALv2](#protocol-document-links) |
 
 ### OCR
 
@@ -345,3 +352,4 @@ Multimodal models are usually extended from large language models.
 | Qwen Research License    | https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE                       |
 | MiniMax H3 Community License | https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE                  |
 | LGPL 2.1+ / GPL 2.0+   | https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md                                      |
+| FSL-1.1-ALv2 | https://github.com/vostride/agent-qa/blob/main/LICENSE.md |
